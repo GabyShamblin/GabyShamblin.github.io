@@ -1,10 +1,11 @@
 {
   "files": {
     "main.css": "/static/css/main.f97c4538.css",
-    "main.js": "/static/js/main.3ba3a4a5.js",
+    "main.js": "/static/js/main.9a821276.js",
     "static/js/453.19a46213.chunk.js": "/static/js/453.19a46213.chunk.js",
     "static/media/rain-project.png": "/static/media/rain-project.c7e26c86b08f14d8b379.png",
     "static/media/mr-thumb.png": "/static/media/mr-thumb.7d702ed5f6d69bc06786.png",
+    "static/media/thesis-thumb.png": "/static/media/thesis-thumb.5c7a3f5a45c4cc34f901.png",
     "static/media/picture_cruise.JPG": "/static/media/picture_cruise.ffac347a1d89cdd43c0e.JPG",
     "static/media/ar-thumb.png": "/static/media/ar-thumb.58606eb370c92849b7fd.png",
     "static/media/vr-thumb.png": "/static/media/vr-thumb.853384faa437babe37d3.png",
@@ -25,12 +26,13 @@
     "static/media/placeholder.png:Zone.Identifier": "/static/media/placeholder.png:Zone.845c2f953b7ddcf3cbbb.Identifier",
     "static/media/vr-thumb.png:Zone.Identifier": "/static/media/vr-thumb.png:Zone.845c2f953b7ddcf3cbbb.Identifier",
     "static/media/Screenshot 2024-05-12 230610.png:Zone.Identifier": "/static/media/Screenshot 2024-05-12 230610.png:Zone.4c1ca89552fbd0b99026.Identifier",
+    "static/media/place-cont-async.png:Zone.Identifier": "/static/media/place-cont-async.png:Zone.4c1ca89552fbd0b99026.Identifier",
     "main.f97c4538.css.map": "/static/css/main.f97c4538.css.map",
-    "main.3ba3a4a5.js.map": "/static/js/main.3ba3a4a5.js.map",
+    "main.9a821276.js.map": "/static/js/main.9a821276.js.map",
     "453.19a46213.chunk.js.map": "/static/js/453.19a46213.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f97c4538.css",
-    "static/js/main.3ba3a4a5.js"
+    "static/js/main.9a821276.js"
   ]
 }
