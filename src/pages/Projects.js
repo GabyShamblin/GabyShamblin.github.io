@@ -97,11 +97,11 @@ function ProjectBox(props) {
 	return (
 		<CustomBox link={true} p={2} sx={{m: 'auto', textAlign: 'left', mb: 1}}>
 			<Grid container>
-				<Grid item container xs>
-					<Grid item xs={12} sm={2} sx={{m: 1}}>
+				<Grid container size="grow">
+					<Grid size={{xs: 12, sm: 2}} sx={{m: 1}}>
 						<img src={require(`./public/thumbnails/${project.media}`)} id='thumbnail' alt='Project' className='center'/>
 					</Grid>	
-					<ListGrid item xs project={true} pl={2} ml={2}>
+					<ListGrid size="grow" project={true} pl={2} ml={2}>
 						<div>
 							{project.title} | {project.dates}
 						</div>
@@ -112,7 +112,7 @@ function ProjectBox(props) {
 							<ListItem>
 								<Grid container>
 									{project.skills.map(skill => (
-										<Grid item>
+										<Grid>
 											<SkillChip label={skill}/>
 										</Grid>
 									))}
@@ -121,9 +121,9 @@ function ProjectBox(props) {
 						</List>
 					</ListGrid>	
 				</Grid>
-				<Grid item container sm={12} md={2} alignItems='center' justifyContent='center'>
+				<Grid container size={{sm: 12, md: 2}} alignItems='center' justifyContent='center'>
 					{project.links.map(link => (
-						<Grid item sx={{marginLeft: '5px'}}>
+						<Grid sx={{marginLeft: '5px'}}>
 							{link.file ? 
 							<a href={link.file} download target='_blank' rel="noopener noreferrer">
 								<CustomButton>

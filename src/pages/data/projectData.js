@@ -1,14 +1,18 @@
 const projects = [
+	// Thesis
 	{
 		title: "Thesis",
-		dates: "Jan 2024 - Present",
-		media: "",
+		dates: "Jan 2024 - Apr 2025",
+		media: "thesis-thumb.png",
 		description: [
-			"A research project that aims to find how different controller visualizations impact how users follow a given movement."
+			"A research project that aims to find how different controller visualizations impact how users follow a given movement.",
+			"Results indicated that manual and animation type had a significant effect on accuracy, and manual and offset type had a significant effect on user preference."
 		],
-		skills: ["Unity", "C#", "Meta XR SDK"],
+		skills: ["Unity", "C#", "Meta XR SDK", "R"],
 		links: [
-			{label: "Github", click: "https://github.com/GabyShamblin/Thesis-Project"}
+			{label: "Project Github", click: "https://github.com/GabyShamblin/Thesis-Project"},
+			{label: "Data Github", click: "https://github.com/GabyShamblin/movement-visualization-data"},
+			{label: "Thesis", click: ""}
 		]
 	},
 	// Moon

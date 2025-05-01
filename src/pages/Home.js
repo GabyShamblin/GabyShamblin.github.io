@@ -149,17 +149,17 @@ function Home() {
 			</div>
 
 			<Grid container spacing={1}>
-				<Grid container item xs={12} sm={3} spacing={1} justifyContent='flex-start' alignItems='center' direction='column'>
+				<Grid container size={{xs:12, sm:3}} spacing={1} justifyContent='flex-start' alignItems='center' direction='column'>
 					{/* Picture */}
-					<Grid item>
+					<Grid>
 						<img id="me" src={me} alt="Me"/>
 					</Grid>
 
 					{/* Left align text and add lines with extend animation */}
 					{/* Menu Buttons */}
-					<Grid container item justifyContent='center' alignContent='center' direction={{xs:'row', sm:'column'}}>
+					<Grid container justifyContent='center' alignContent='center' direction={{xs:'row', sm:'column'}}>
 
-						<Grid item sx={{p:0.5, px:1, mr:0.2}}>
+						<Grid sx={{p:0.5, px:1, mr:0.2}}>
 							<HashLink smooth to="/#about" 
 								style={{textDecoration: 'none'}}
 							>
@@ -170,7 +170,7 @@ function Home() {
 							</HashLink>
 						</Grid>
 
-						<Grid item sx={{p:0.5, px:1, mr:0.2}}>
+						<Grid sx={{p:0.5, px:1, mr:0.2}}>
 							<HashLink smooth to="/#education" 
 								style={{textDecoration: 'none'}}
 							>
@@ -181,7 +181,7 @@ function Home() {
 							</HashLink>
 						</Grid>
 
-						<Grid item sx={{p:0.5, px:1, mr:0.2}}>
+						<Grid sx={{p:0.5, px:1, mr:0.2}}>
 							<HashLink smooth to="/#experience" 
 								style={{textDecoration: 'none'}}
 							>
@@ -192,7 +192,7 @@ function Home() {
 							</HashLink>
 						</Grid>
 
-						<Grid item sx={{p:0.5, px:1, mr:0.2}}>
+						<Grid sx={{p:0.5, px:1, mr:0.2}}>
 							<HashLink smooth to="/#projects"  
 								style={{textDecoration: 'none'}}
 							>
@@ -203,7 +203,7 @@ function Home() {
 							</HashLink>
 						</Grid>
 
-						{/* <Grid item sx={{p:0.5, px:1, mr:0.2}}>
+						{/* <Grid sx={{p:0.5, px:1, mr:0.2}}>
 							<HashLink smooth to="/#contact"  
 								style={{textDecoration: 'none'}}
 							>
@@ -218,7 +218,7 @@ function Home() {
 				</Grid>
 
 				{/* Content Column */}
-				<Grid item xs>
+				<Grid size="grow">
 					<section id='about'>
 						<About/>
 					</section>
@@ -289,7 +289,7 @@ function EducationBox (props) {
 	return (
 		<CustomBox sx={{m: 'auto'}}>
 			<Grid container>
-				<Grid item xs={2}>
+				<Grid size={2}>
 					<div className='rel'>
 						<ListDate>
 							{school.graduation}
@@ -297,7 +297,7 @@ function EducationBox (props) {
 						<TimelineCircle/>
 					</div>
 				</Grid>
-				<ListGrid item xs pl={2} ml={2} pb={1}>
+				<ListGrid size="grow" pl={2} ml={2} pb={1}>
 					<div>
 						{school.degree} | <i>{school.school}</i>
 					</div>
@@ -347,7 +347,7 @@ function ExperienceBox (props) {
 	return (
 		<CustomBox sx={{m: 'auto'}}>
 			<Grid container>
-				<Grid item xs={2}>
+				<Grid size={2}>
 					<div className='rel'>
 						<ListDate>
 							{job.dates}
@@ -355,7 +355,7 @@ function ExperienceBox (props) {
 						<TimelineCircle/>
 					</div>
 				</Grid>
-				<ListGrid item xs pl={2} ml={2} pb={4}>
+				<ListGrid size="grow" pl={2} ml={2} pb={4}>
 					<div>
 						{job.title} | <i>{job.company}</i>
 					</div>
@@ -368,7 +368,7 @@ function ExperienceBox (props) {
 						<ListItem>
 							<Grid container>
 								{job.skills.map(skill => (
-									<Grid item>
+									<Grid>
 										<SkillChip label={skill}/>
 									</Grid>
 								))}
@@ -413,10 +413,10 @@ function ProjectsBox (props) {
 			<Link href={project.links[0].click} target="_blank" rel="noopener" underline='none'>
 				<CustomBox link={true} p={2} sx={{m: 'auto', textAlign: 'left'}}>
 					<Grid container>
-						<Grid item xs={12} sm={2} justifyContent='center'>
+						<Grid size={{xs: 12, sm: 2}} justifyContent='center'>
 							<img src={require(`./public/thumbnails/${project.media}`)} id='thumbnail' alt='Project' className='center'/>
 						</Grid>	
-						<ListGrid item xs project={true} pl={2} ml={2}>
+						<ListGrid size="grow" project={true} pl={2} ml={2}>
 							<div>
 								{project.title}
 							</div>
@@ -427,7 +427,7 @@ function ProjectsBox (props) {
 								<ListItem>
 									<Grid container>
 										{project.skills.map(skill => (
-											<Grid item>
+											<Grid>
 												<SkillChip label={skill}/>
 											</Grid>
 										))}
@@ -446,9 +446,9 @@ function Contact () {
 	return (
 		<CustomBox px={2} py={4} sx={{m: 'auto'}}>
 			{/* Contact Icons */}
-			<Grid container item justifyContent='center'>
+			<Grid container justifyContent='center'>
 				{/* Github Icon */}
-				<Grid item>
+				<Grid>
 					<Link href="https://github.com/GabyShamblin" 
 					target="_blank" rel="noopener">
 						<CustomIconButton aria-label='Github'>
@@ -457,7 +457,7 @@ function Contact () {
 					</Link>
 				</Grid>
 				{/* LinkedIn Icon */}
-				<Grid item>
+				<Grid>
 					<Link href="https://www.linkedin.com/in/gabriela-shamblin-7416611b7/" 
 					target="_blank" rel="noopener">
 						<CustomIconButton aria-label='LinkedIn'>
@@ -466,7 +466,7 @@ function Contact () {
 					</Link>
 				</Grid>
 				{/* Youtube Icon */}
-				<Grid item>
+				<Grid>
 					<Link href="https://www.youtube.com/channel/UCzyOgtGvN-X7MkaP_amMYNg" 
 					target="_blank" rel="noopener">
 						<CustomIconButton aria-label='YouTube'>
@@ -475,7 +475,7 @@ function Contact () {
 					</Link>
 				</Grid>
 				{/* Email Icon */}
-				<Grid item>
+				<Grid>
 					<Link href="mailto:gabyshamblin@gmail.com" 
 					target="_blank" rel="noopener">
 						<CustomIconButton aria-label='Email'>

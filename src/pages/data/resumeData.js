@@ -65,7 +65,7 @@ const education = [
 	{
 		school: "University of Central Florida", 
 		location: "Orlando, FL",
-		graduation: "Expected: May 2025",
+		graduation: "May 2025",
 		degree: "Master of Science, Computer Science",
 		concentration: "Mixed Reality Certificate",
 		gpa: "3.5/4.0"
@@ -135,6 +135,9 @@ const skills = [
 			}, {
 				name: "SQL",
 				media: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg"
+			}, {
+				name: "Java",
+				media: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
 			},
 		]
 	}, {
@@ -183,16 +186,21 @@ const skills = [
 				name: "Markdown",
 				media: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/markdown/markdown-original.svg",
 				background: true
-			}, {
-				name: "npm",
-				media: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original-wordmark.svg"
-			}, {
+			}, 
+			// {
+			// 	name: "npm",
+			// 	media: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original-wordmark.svg"
+			// }, 
+			{
 				name: "Numpy",
 				media: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg"
 			}, {
 				name: "Pandas",
 				media: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg",
 				background: true
+			}, {
+				name: "R",
+				media: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/r/r-original.svg",
 			}, {
 				name: "Visual Studio",
 				media: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/visualstudio/visualstudio-original.svg"

@@ -143,7 +143,7 @@ function Contact() {
 				</div>
 
 				<Grid container spacing={2} direction="row" justifyContent="center" sx={{pb: 5}}>
-					<Grid item>
+					<Grid>
 						<Link href="https://github.com/GabyShamblin" 
 						target="_blank" rel="noopener">
 							<CustomIconButton aria-label='Github'>
@@ -152,7 +152,7 @@ function Contact() {
 						</Link>
 					</Grid>
 
-					<Grid item>
+					<Grid>
 						<Link href="https://www.linkedin.com/in/gabriela-shamblin-7416611b7/" 
 						target="_blank" rel="noopener">
 							<CustomIconButton aria-label='LinkedIn'>
@@ -161,7 +161,7 @@ function Contact() {
 						</Link>
 					</Grid>
 					
-					<Grid item>
+					<Grid>
 						<Link href="https://www.youtube.com/channel/UCzyOgtGvN-X7MkaP_amMYNg" 
 						target="_blank" rel="noopener">
 							<CustomIconButton aria-label='YouTube'>
@@ -170,7 +170,7 @@ function Contact() {
 						</Link>
 					</Grid>
 
-					<Grid item>
+					<Grid>
 						<Link href="mailto:gabyshamblin@gmail.com" 
 						target="_blank" rel="noopener">
 							<CustomIconButton aria-label='Email'>

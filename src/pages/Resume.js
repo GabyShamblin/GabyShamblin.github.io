@@ -180,7 +180,7 @@ function TimelineDegree(props) {
 	return (
 		<CustomBox sx={{m: 'auto'}}>
 			<Grid container>
-				<Grid item xs={2}>
+				<Grid size={2}>
 					<div className='rel'>
 						<ListDate>
 							{degree.graduation}
@@ -188,7 +188,7 @@ function TimelineDegree(props) {
 						<TimelineCircle/>
 					</div>
 				</Grid>
-				<ListGrid item xs pl={2} ml={2} pb={4}>
+				<ListGrid size="grow" pl={2} ml={2} pb={4}>
 					<div>
 						{degree.degree} | <i>{degree.school}</i>
 					</div>
@@ -218,7 +218,7 @@ function TimelineJob(props) {
 	return (
 		<CustomBox sx={{m: 'auto'}}>
 			<Grid container>
-				<Grid item xs={2}>
+				<Grid size={2}>
 					<div className='rel'>
 						<ListDate>
 							{job.dates}
@@ -226,7 +226,7 @@ function TimelineJob(props) {
 						<TimelineCircle/>
 					</div>
 				</Grid>
-				<ListGrid item xs pl={2} ml={2} pb={4}>
+				<ListGrid size="grow" pl={2} ml={2} pb={4}>
 					<div>
 						{job.title} | <i>{job.company}</i>
 					</div>
@@ -239,7 +239,7 @@ function TimelineJob(props) {
 						<ListItem>
 							<Grid container>
 								{job.skills.map(skill => (
-									<Grid item>
+									<Grid>
 										<SkillChip label={skill}/>
 									</Grid>
 								))}
@@ -258,7 +258,7 @@ function SkillSection(props) {
 	return (
 		<React.Fragment>
 			<Typography>{field.title}</Typography>
-			<Grid item container spacing={1.5} justifyContent='center' sx={{pb: 4}}>
+			<Grid container spacing={1.5} justifyContent='center' sx={{pb: 4}}>
 				{field.section.map(skill => (
 					<Logo skill={skill}/>
 				))}
@@ -275,7 +275,7 @@ function Logo(props) {
 	}
 
 	return (
-		<Grid item direction="row">
+		<Grid direction="row">
 			{skill.background ? (
 				<LogoCircle>
 					<img id='logo' src={skill.media} alt={skill.name}/>
@@ -291,7 +291,7 @@ function Cert(props) {
 	const cert = props.cert;
 
 	return (
-		<Grid item sx={{textAlign: 'center'}}>
+		<Grid sx={{textAlign: 'center'}}>
 			<Link href={cert.link} target="_blank" rel="noopener" style={{textDecoration:"none", color: 'white',}}>
 				<img id='cert' src={require(`./public/logos/aws.png`)} alt={cert.name}/>
 				<Typography>{cert.name}</Typography>
