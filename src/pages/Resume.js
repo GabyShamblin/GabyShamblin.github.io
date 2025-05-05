@@ -89,7 +89,7 @@ const MenuText = styled(Typography)(() => ({
 
 function Resume() {
 	useEffect(() => {
-		document.title = 'Resume';
+		document.title = 'Resume | Gabriela Shamblin';
 	});
 
   return (

@@ -104,7 +104,7 @@ const MenuText = styled(Typography)(() => ({
 
 function Contact() {
 	useEffect(() => {
-		document.title = 'Contact';
+		document.title = 'Contact | Gabriela Shamblin';
 	});
 
 	const [toSend, setToSend] = useState({

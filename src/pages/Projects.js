@@ -62,7 +62,7 @@ const MenuText = styled(Typography)(() => ({
 
 function Projects() {
 	useEffect(() => {
-		document.title = 'Projects';
+		document.title = 'Projects | Gabriela Shamblin';
 	});
 
 	console.log(projects);
@@ -103,7 +103,7 @@ function ProjectBox(props) {
 					</Grid>	
 					<ListGrid size="grow" project={true} pl={2} ml={2}>
 						<div>
-							{project.title} | {project.dates}
+							{project.title} | <i>{project.dates}</i>
 						</div>
 						<List className='text-desc'>
 							{project.description.map(desc => (

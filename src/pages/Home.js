@@ -121,7 +121,7 @@ const TimelineCircle = styled(CircleIcon)(() => ({
 
 function Home() {
 	useEffect(() => {
-		document.title = 'Home';
+		document.title = 'Home | Gabriela Shamblin';
 	});
 	const [path, setPath] = React.useState('');
 	if (path !== window.location.pathname) {
