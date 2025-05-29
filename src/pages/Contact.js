@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { styled } from '@mui/material/styles';
-import { Box, Button, Grid, IconButton, Typography, 
-	Stack, TextField, Link } from '@mui/material';
+import { Box, Button, Grid, IconButton, Typography, Stack, TextField } from '@mui/material';
 import { flexbox } from '@mui/system';
 import './css/typing.css';
 
@@ -103,9 +103,9 @@ const MenuText = styled(Typography)(() => ({
 
 
 function Contact() {
-	useEffect(() => {
-		document.title = 'Contact | Gabriela Shamblin';
-	});
+	// useEffect(() => {
+	// 	document.title = 'Contact | Gabriela Shamblin';
+	// });
 
 	const [toSend, setToSend] = useState({
 		name: '',
@@ -132,103 +132,95 @@ function Contact() {
 	};
 
   return (
-		
 		<React.Fragment>
-			<div className="App">
 
-				<div className='wrapper'>
-					<div className='typing-contact'>
-						/* Contact Me! */
-					</div>
-				</div>
+			<CustomBox component='form' sx={{display: flexbox, justifyContent: 'center', m:'auto'}}>
+				<Stack spacing={2} sx={{pb: 2, maxWidth: '500px', m: 'auto'}}>
+					<CustomTextField 
+						required
+						id="name" 
+						name="name"
+						label="Name"
+						value={toSend.name}
+						variant="standard"
+						onChange={handleChange}/>
+					<CustomTextField 
+						required
+						id="email" 
+						name="email"
+						label="Email Address"
+						value={toSend.email}
+						variant="standard"
+						onChange={handleChange}/>
+					<CustomTextField 
+						required
+						multiline
+						rows={5}
+						id="message" 
+						name="message"
+						label="Message"
+						value={toSend.message}
+						variant="standard"
+						onChange={handleChange}/>
+						<div className="g-recaptcha" data-sitekey="your_site_key"></div>
+				</Stack>
 
-				<Grid container spacing={2} direction="row" justifyContent="center" sx={{pb: 5}}>
-					<Grid>
-						<Link href="https://github.com/GabyShamblin" 
-						target="_blank" rel="noopener">
-							<CustomIconButton aria-label='Github'>
-								<GitHubIcon fontSize='large'/>
-							</CustomIconButton>
-						</Link>
-					</Grid>
-
-					<Grid>
-						<Link href="https://www.linkedin.com/in/gabriela-shamblin-7416611b7/" 
-						target="_blank" rel="noopener">
-							<CustomIconButton aria-label='LinkedIn'>
-								<LinkedInIcon fontSize='large'/>
-							</CustomIconButton>
-						</Link>
-					</Grid>
-					
-					<Grid>
-						<Link href="https://www.youtube.com/channel/UCzyOgtGvN-X7MkaP_amMYNg" 
-						target="_blank" rel="noopener">
-							<CustomIconButton aria-label='YouTube'>
-								<YouTubeIcon fontSize='large'/>
-							</CustomIconButton>
-						</Link>
-					</Grid>
-
-					<Grid>
-						<Link href="mailto:gabyshamblin@gmail.com" 
-						target="_blank" rel="noopener">
-							<CustomIconButton aria-label='Email'>
-								<EmailIcon fontSize='large'/>
-							</CustomIconButton>
-						</Link>
-					</Grid>
-				</Grid>
-
-				<CustomBox component='form' sx={{display: flexbox, justifyContent: 'center', m:'auto', p:1}}>
-					<Stack spacing={2} sx={{pb: 2, maxWidth: '500px', m: 'auto'}}>
-						<CustomTextField 
-							required
-							id="name" 
-							name="name"
-							label="Name"
-							value={toSend.name}
-							variant="standard"
-							onChange={handleChange}/>
-						<CustomTextField 
-							required
-							id="email" 
-							name="email"
-							label="Email Address"
-							value={toSend.email}
-							variant="standard"
-							onChange={handleChange}/>
-						<CustomTextField 
-							required
-							multiline
-							rows={5}
-							id="message" 
-							name="message"
-							label="Message"
-							value={toSend.message}
-							variant="standard"
-							onChange={handleChange}/>
-							<div className="g-recaptcha" data-sitekey="your_site_key"></div>
-					</Stack>
-
-					<CustomButton 
-						aria-label='Send message' 
-						size='large'
-						type='submit'
-						onClick={onSubmit}
-					>
-						<EmailIcon/>
-						<Typography sx={{fontSize: 16, p: 1}}>
-							Send a message
-						</Typography>
-					</CustomButton>
-				</CustomBox>
-
-				<div className='spacer'></div>
-
-			</div>
+				<CustomButton 
+					aria-label='Send message' 
+					size='large'
+					type='submit'
+					onClick={onSubmit}
+				>
+					<EmailIcon/>
+					<Typography sx={{fontSize: 16, p: 1}}>
+						Send a message
+					</Typography>
+				</CustomButton>
+			</CustomBox>
 		</React.Fragment>
   );
 }
 
-export default Contact;
+function Socials() {
+	return (
+		<Grid container spacing={3} direction="row" justifyContent="center">
+			<Grid>
+				<Link to="https://github.com/GabyShamblin" 
+				target="_blank" rel="noopener">
+					<CustomIconButton aria-label='Github'>
+						<GitHubIcon fontSize='large'/>
+					</CustomIconButton>
+				</Link>
+			</Grid>
+
+			<Grid>
+				<Link to="https://www.linkedin.com/in/gabriela-shamblin-7416611b7/" 
+				target="_blank" rel="noopener">
+					<CustomIconButton aria-label='LinkedIn'>
+						<LinkedInIcon fontSize='large'/>
+					</CustomIconButton>
+				</Link>
+			</Grid>
+			
+			<Grid>
+				<Link to="https://www.youtube.com/channel/UCzyOgtGvN-X7MkaP_amMYNg" 
+				target="_blank" rel="noopener">
+					<CustomIconButton aria-label='YouTube'>
+						<YouTubeIcon fontSize='large'/>
+					</CustomIconButton>
+				</Link>
+			</Grid>
+
+			<Grid>
+				<Link to="mailto:gabyshamblin@gmail.com" 
+				target="_blank" rel="noopener">
+					<CustomIconButton aria-label='Email'>
+						<EmailIcon fontSize='large'/>
+					</CustomIconButton>
+				</Link>
+			</Grid>
+		</Grid>
+	);
+}
+
+export { Contact, Socials };

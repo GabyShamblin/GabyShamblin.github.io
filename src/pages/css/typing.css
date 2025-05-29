@@ -29,6 +29,18 @@
 	color: #1efc0f;
 }
 
+.typing-name {
+  width: 23ch;
+  animation: typing 2s steps(23), blink .5s step-end 20 alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 4px solid;
+  font-family: monospace;
+  font-size: calc(25px + 1vw) !important;
+	font-weight: 500;
+	color: #1efc0f;
+}
+
 .typing-home {
   width: 26ch;
   animation: typing 2s steps(26), blink .5s step-end 20 alternate;

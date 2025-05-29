@@ -36,7 +36,6 @@ const pages = ['home', 'resume', 'projects', 'contact'];
 function App() {
 	const [path, setPath] = React.useState('');
 	if (path !== window.location.pathname) {
-		console.log("Path: " + path);
 		setPath(window.location.pathname);
 	}
 	// let notHome = /\w(?!#)/.test(path);
@@ -61,7 +60,7 @@ function App() {
   return (
 		<React.Fragment>
 			<div className="App-header">
-				<Box alignItems='flex-end' sx={{
+				{/* <Box alignItems='flex-end' sx={{
 					display: 'flex', 
 					justifyContent: 'center',
 					textAlign: 'center',
@@ -78,11 +77,12 @@ function App() {
 							</MenuText>
 						</Link>
 					} */}
-					<AppBar position="static" style={{ boxShadow: 'none' }} sx={{ backgroundColor: 'transparent' }}>
+					
+					{/* <AppBar position="static" style={{ boxShadow: 'none' }} sx={{ backgroundColor: 'transparent' }}>
 						<Container maxWidth="xl">
 							<Toolbar disableGutters>
 
-								{/* Collapsed Menu */}
+								{/* Collapsed Menu *
 								<Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
 									<IconButton
 										size="large"
@@ -127,7 +127,7 @@ function App() {
 									</Menu>
 								</Box>
 
-								{/* Normal Menu */}
+								{/* Normal Menu *
 								<Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'center' }}>
 									{pages.map((page) => (
 										<Box sx={{p:0.5, px:1, mr:0.2}}>
@@ -145,9 +145,9 @@ function App() {
 							</Toolbar>
 						</Container>
 					</AppBar>
-				</Box>
+				</Box> */}
 
-				<div className='half-spacer'></div>
+				{/* <div className='half-spacer'></div> */}
 
 				<HashLink smooth to={path + '#'} style={{textDecoration: 'none'}}>
 					<UpArrow>

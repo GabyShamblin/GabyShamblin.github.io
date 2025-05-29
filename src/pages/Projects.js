@@ -1,11 +1,14 @@
 import * as React from 'react';
 import { useEffect } from 'react';
 import { styled } from '@mui/material/styles';
-import { Box, Button, Chip, Grid,	Link, List, ListItem, Typography } from '@mui/material';
+import { Link } from 'react-router-dom';
+import { Box, Button, Chip, Grid,	List, ListItem, Typography } from '@mui/material';
 import './css/App.css';
 import './css/typing.css';
 
 import projects from './data/projectData.js';
+
+
 
 const CustomBox = styled(Box)(({link = false}) => ({
   maxWidth: 1200, 
@@ -125,13 +128,13 @@ function ProjectBox(props) {
 					{project.links.map(link => (
 						<Grid sx={{marginLeft: '5px'}}>
 							{link.file ? 
-							<a href={link.file} download target='_blank' rel="noopener noreferrer">
+							<Link to={link.file} download target='_blank' rel="noopener noreferrer">
 								<CustomButton>
 									{link.label}
 								</CustomButton>
-							</a>
+							</Link>
 							:
-							<Link href={link.click} target="_blank" rel="noopener">
+							<Link to={link.click} target="_blank" rel="noopener">
 								<CustomButton>
 									{link.label}
 								</CustomButton>

@@ -30,13 +30,34 @@
 	position: relative;
 }
 
+.no-underline {
+	text-decoration: none;
+}
+
+.title {
+  font-family: monospace;
+  font-size: calc(25px + 1vw) !important;
+	font-weight: 500;
+	color: #1efc0f;
+	animation: up 1s ease-out 1;
+}
+
 .subtitle {
 	color: #d1d1d1;
-	font-size: 20px;
+	font-style: italic;
+}
+
+.subtitle-dark {
+	color: #949494 !important;
 	font-style: italic;
 }
 
 .nerf-p {
 	margin: 0px;
 	margin-bottom: 2%;
+}
+
+@keyframes up {
+	0% { transform: translateY(-50px); }
+	100% { transform: translateY(0px); }
 }

@@ -4,9 +4,10 @@ const experience = [
 		title: "Programmer Analyst", 
 		company: "Johns Hopkins University",
 		location: "Remote",
-		dates: "Apr 2024 - Present",
+		startDate: "Apr 2024",
+		endDate: "",
 		description: [
-			"Develop immersive virtual reality training simulations for the da Vinci surgical system ysing Unity, C\#, and the Meta XR SDK to enhance user motor skills and procedural accuracy.",
+			"Develop immersive virtual reality training simulations for the da Vinci surgical system using Unity, C\#, and the Meta XR SDK to enhance user motor skills and procedural accuracy.",
 			"Integrate advanced datasets, such as JIGSAWS, to create dynamic, interactive learning environments tailored to individual user needs, driving innovation in surgical education.",
 			"Collaborate cross-functionally to design and implement scalable solutions, ensuring seamless functionality and user engagement for a professional audience."
 		], 
@@ -17,7 +18,8 @@ const experience = [
 		title: "Software Engineering Intern", 
 		company: "JP Morgan Chase & Co.",
 		location: "Tampa, FL",
-		dates: "Jun 2023 - Aug 2023",
+		startDate: "Jun 2023",
+		endDate: "Aug 2023",
 		description: [
 			"Designed and deployed an ADA-compliant user interface for an internal application using React.js and Springboot, supporting 30,000 users and enhancing accessibility.",
 			"Communicated with shareholders about project specifications.",
@@ -30,7 +32,8 @@ const experience = [
 		title: "Full Stack Intern", 
 		company: "Epic North LLC",
 		location: "Remote",
-		dates: "Jun 2022 - Apr 2023",
+		startDate: "Jun 2022",
+		endDate: "Apr 2023",
 		description: [
 			"Optimized website functionality and repaired code by leveraging Angular, TypeScript, ASP.NET, and SQL, ensuring seamless client deliverables."
 		], 
@@ -41,7 +44,8 @@ const experience = [
 		title: "Teaching Assistant", 
 		company: "University of Central Florida",
 		location: "Orlando, FL",
-		dates: "Jul 2021 - Dec 2022",
+		startDate: "Jul 2021",
+		endDate: "Dec 2022",
 		description: [
 			"Taught foundational Python programming concepts to classes of 230 students, provided timely feedback on assignments, and supported learning through labs and office hours."
 		], 
@@ -52,7 +56,8 @@ const experience = [
 		title: "Teaching Assistant", 
 		company: "UCF Computer Science Summer Institute",
 		location: "Orlando, FL",
-		dates: "Jun 2021",
+		startDate: "Jun 2021",
+		endDate: "Jun 2021",
 		description: [
 			"Graded assignments and provided appropriate feedback in a timely manner.",
 			"Taught topics in Python to a class of eight students and offered support with questions."
@@ -68,7 +73,7 @@ const education = [
 		graduation: "May 2025",
 		degree: "Master of Science, Computer Science",
 		concentration: "Mixed Reality Certificate",
-		gpa: "3.5/4.0"
+		gpa: "3.6/4.0"
 	}, {
 		school: "University of Central Florida", 
 		location: "Orlando, FL",

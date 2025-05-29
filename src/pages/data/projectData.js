@@ -1,9 +1,11 @@
 const projects = [
 	// Thesis
 	{
+		id: "thesis",
 		title: "Thesis",
 		dates: "Jan 2024 - Apr 2025",
 		media: "thesis-thumb.png",
+		summary: "A research project that aims to find how different controller visualizations impact how users follow a given movement",
 		description: [
 			"A research project that aims to find how different controller visualizations impact how users follow a given movement.",
 			"Results indicated that manual and animation type had a significant effect on accuracy, and manual and offset type had a significant effect on user preference."
@@ -16,29 +18,31 @@ const projects = [
 		]
 	},
 	// Moon
-	{
-		title: "VR Moon Trip", 
-		dates: "Jan - Apr 2024",
-		media: "advvr-thumb.png", 
-		description: [
-			"A Unity project for CAP 6119: Advanced VR.",
-			"Includes a scripted sequence meant mimic the ride Mission: Space.",
-			"Walks player through the controls, takeoff, landing, and environmental interactions."
-		], 
-		skills: ["Unity", "C#", "XR Interaction Toolkit", "Blender"], 
-		links: [
-			{label: "Video", click: "https://youtu.be/YrPfZW1eUFg"}
-		]
-	}, 
+	// {
+	// 	title: "VR Moon Trip", 
+	// 	dates: "Jan - Apr 2024",
+	// 	media: "advvr-thumb.png", 
+	// 	description: [
+	// 		"A Unity project for CAP 6119: Advanced VR.",
+	// 		"Includes a scripted sequence meant mimic the ride Mission: Space.",
+	// 		"Walks player through the controls, takeoff, landing, and environmental interactions."
+	// 	], 
+	// 	skills: ["Unity", "C#", "XR Interaction Toolkit", "Blender"], 
+	// 	links: [
+	// 		{label: "Video", click: "https://youtu.be/YrPfZW1eUFg"}
+	// 	]
+	// }, 
 	// Escape room
 	{
+		id: "escape-room",
 		title: "VR Escape Room", 
 		dates: "Jan - Apr 2024",
 		media: "mr-thumb.png", 
+		summary: "A group virtual reality escape room project",
 		description: [
 			"A group project with 5 people for CAP 6117: Mixed Reality Project.", 
 			"Includes 4 different puzzles for the user to solve (estimated 30 minutes playtime).", 
-			"Worked on environment and puzzle integration."
+			"Was designated project manager and worked on puzzle integration and environment creation."
 		], 
 		skills: ["Unity", "C#", "XR Interaction Toolkit", "Blender"],
 		links: [
@@ -47,28 +51,30 @@ const projects = [
 		]
 	}, 
 	// Thunderstorm
-	{
-		title: "Thunderstorm Simulation", 
-		dates: "Aug - Dec 2023",
-		media: "rain-project.png", 
-		description: [
-			"A project created for CAP 5727: Realistic Realtime Rendering.", 
-			"Designed to mimic a real-world thunderstorm using Unreal Engine 5's Blueprints, Niagara particle system, and Lumen."
-		], 
-		skills: ["Unreal Engine 5"], 
-		links: [
-			{label: "Video", click: "https://youtu.be/mS35nARSo88?si=TscXleuAKQbuq2yM"},
-			{label: "Github", click: "https://github.com/GabyShamblin/Realtime-Rendering"}
-		]
-	}, 
+	// {
+	// 	title: "Thunderstorm Simulation", 
+	// 	dates: "Aug - Dec 2023",
+	// 	media: "rain-project.png", 
+	// 	description: [
+	// 		"A project created for CAP 5727: Realistic Realtime Rendering.", 
+	// 		"Designed to mimic a real-world thunderstorm using Unreal Engine 5's Blueprints, Niagara particle system, and Lumen."
+	// 	], 
+	// 	skills: ["Unreal Engine 5"], 
+	// 	links: [
+	// 		{label: "Video", click: "https://youtu.be/mS35nARSo88?si=TscXleuAKQbuq2yM"},
+	// 		{label: "Github", click: "https://github.com/GabyShamblin/Realtime-Rendering"}
+	// 	]
+	// }, 
 	// AR engineering
 	{
+		id: "ar",
 		title: "Augmented Reality Engineering", 
 		dates: "Aug - Dec 2023",
 		media: "ar-thumb.png", 
+		summary: "A series of six augmented reality projects covering multiple topics",
 		description: [
 			"Six Unity projects on different topics created for CAP 6110: Augmented Reality Engineering.", 
-			"Topics include tracking, visual coherence, situated visualization, interaction, navigation, and collaboration."
+			"Topics include tracking, visual coherence, situated visualization, interaction, navigation, and collaboration/multiplayer."
 		], 
 		skills: ["Unity", "C#", "Vuforia"], 
 		links: [
@@ -77,42 +83,46 @@ const projects = [
 	}, 
 	// Senserator
 	{
+		id: "sense-rator",
 		title: "SenseRator", 
 		dates: "Feb - Dec 2023",
 		media: "senserator-thumb.jpg", 
+		summary: "A group senior design project which performs object detection and semantic segmentation on camera data",
 		description: [
-			"A group of 5 people for COP 4934/4935: Senior Design.", 
+			"A group project of 5 people for COP 4934/4935: Senior Design.", 
 			"Uses lidar and a camera to capture the environment.", 
 			"Performs object detection and semantic segmentation on camera data and displays output to the user on a custom interface.",
-			"Worked on user interface."
+			"Worked on user interface and LiDAR display."
 		], 
 		skills: ["Python", "PySimpleGUI", "Open3D"], 
 		links: [
 			{label: "Video", click: "https://youtu.be/rFd1qQmFYQ0?si=wPxdY7MrYtnJDtDm"}
 		]
 	}, 
-	// Heart
-	{
-		title: "Heart Visualization Tool", 
-		dates: "May 2023",
-		media: "heart.jpg", 
-		description: [
-			"Heart visualization including labels for different parts of the human heart.", 
-			"Allows user to click through labels, start and stop animation, rotate around subject, and zoom in and out.", 
-			"Made following LinkedIn Learning tutorial by Alan Thorn"
-		], 
-		skills: ["Unity", "C#"], 
-		links: [
-			{label: "Try it for Windows", file: "./public/HeartWin64.zip"},
-			{label: "Try it for Mac", file: "./public/HeartMac.zip"},
-			{label: "Tutorial", click: "https://www.linkedin.com/learning-login/share?account=57691257&forceAccount=false&redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Funity-medical-visualization-01-preparation-and-design%3Ftrk%3Dshare_ent_url%26shareId%3DH7coBLC%252BRO%252BbCMm3BaxMFA%253D%253D"}
-		]
-	}, 
+	// Heart (including tutorial projects not a good idea?)
+	// {
+	// 	title: "Heart Visualization Tool", 
+	// 	dates: "May 2023",
+	// 	media: "heart.jpg", 
+	// 	description: [
+	// 		"Heart visualization including labels for different parts of the human heart.", 
+	// 		"Allows user to click through labels, start and stop animation, rotate around subject, and zoom in and out.", 
+	// 		"Made following LinkedIn Learning tutorial by Alan Thorn"
+	// 	], 
+	// 	skills: ["Unity", "C#"], 
+	// 	links: [
+	// 		{label: "Try it for Windows", file: "./public/HeartWin64.zip"},
+	// 		{label: "Try it for Mac", file: "./public/HeartMac.zip"},
+	// 		{label: "Tutorial", click: "https://www.linkedin.com/learning-login/share?account=57691257&forceAccount=false&redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Funity-medical-visualization-01-preparation-and-design%3Ftrk%3Dshare_ent_url%26shareId%3DH7coBLC%252BRO%252BbCMm3BaxMFA%253D%253D"}
+	// 	]
+	// }, 
 	// VR engineering
 	{
+		id: "vr",
 		title: "Virtual Reality Engineering", 
 		dates: "Jan - Apr 2023",
 		media: "vr-thumb.png", 
+		summary: "A series of six virtual reality projects covering multiple topics",
 		description: [
 			"Six Unity projects on different topics created for CAP 5115: Virtual Reality Engineering.", 
 			"Topics include virtual environments, traveling, interactions, pyhsics, animations, and user interactions."
@@ -124,9 +134,11 @@ const projects = [
 	}, 
 	// Topo schedule
 	{
+		id: "top-schedule",
 		title: "Top of the Schedule", 
 		dates: "Feb - Apr 2022",
 		media: "scheduler.jpg", 
+		summary: "A group project of a custom schedule builder for the UCF computer science program",
 		description: [
 			"A group project with 7 people for COP 4311: Processes of Object-Oriented Software Development.", 
 			"Allows users to create a college career schedule for the UCF Computer Science undergraduate program.", 
@@ -139,65 +151,65 @@ const projects = [
 		]
 	}, 
 	// Contact manager
-	{
-		title: "Knight's Contact Manager", 
-		dates: "Feb 2022",
-		media: "contactManager.jpg", 
-		description: [
-			"A group project with 4 people for COP 4311: Processes of Object-Oriented Software Development.", 
-			"Users can login or register an account.", 
-			"Allows a logged in user to create, search, update, and delete contacts.",
-			"Worked on design and frontend."
-		], 
-		skills: ["HTML", "CSS", "Bootstrap"], 
-		links: [
-			{label: "Presentation", file: "./public/Small Project.pdf"}
-		]
-	}, 
+	// {
+	// 	title: "Knight's Contact Manager", 
+	// 	dates: "Feb 2022",
+	// 	media: "contactManager.jpg", 
+	// 	description: [
+	// 		"A group project with 4 people for COP 4311: Processes of Object-Oriented Software Development.", 
+	// 		"Users can login or register an account.", 
+	// 		"Allows a logged in user to create, search, update, and delete contacts.",
+	// 		"Worked on design and frontend."
+	// 	], 
+	// 	skills: ["HTML", "CSS", "Bootstrap"], 
+	// 	links: [
+	// 		{label: "Presentation", file: "./public/Small Project.pdf"}
+	// 	]
+	// }, 
 	// Gray website
-	{
-		title: "emilygrayauthor.com", 
-		dates: "Dec 2021 - Present",
-		media: "grayWebsite.jpg", 
-		description: [
-			"Creation and maintenance of a website for a bestselling author."
-		], 
-		skills: ["HTML", "CSS"], 
-		links: [
-			{label: "Website", click: "https://emilygrayauthor.com/"}
-		]
-	}, 
+	// {
+	// 	title: "emilygrayauthor.com", 
+	// 	dates: "Dec 2021 - Present",
+	// 	media: "grayWebsite.jpg", 
+	// 	description: [
+	// 		"Creation and maintenance of a website for a bestselling author."
+	// 	], 
+	// 	skills: ["HTML", "CSS"], 
+	// 	links: [
+	// 		{label: "Website", click: "https://emilygrayauthor.com/"}
+	// 	]
+	// }, 
 	// Liar's dice
-	{
-		title: "Liar's Dice Game", 
-		dates: "Nov 2021",
-		media: "diceGame.jpg", 
-		description: [
-			"A group project with 4 people for KnightHacks 2021.", 
-			"Worked on JavaScript for the base game rules.", 
-			"Includes a game log to keep track of player's guesses and tally scores."
-		], 
-		skills: ["HTML", "CSS", "JavaScript"], 
-		links: [
-			{label: "Hackathon Page", click: "https://devpost.com/software/liar-s-dice-8qen14?ref_content=my-projects-tab&ref_feature=my_projects"}
-		]
-	}, 
+	// {
+	// 	title: "Liar's Dice Game", 
+	// 	dates: "Nov 2021",
+	// 	media: "diceGame.jpg", 
+	// 	description: [
+	// 		"A group project with 4 people for KnightHacks 2021.", 
+	// 		"Worked on JavaScript for the base game rules.", 
+	// 		"Includes a game log to keep track of player's guesses and tally scores."
+	// 	], 
+	// 	skills: ["HTML", "CSS", "JavaScript"], 
+	// 	links: [
+	// 		{label: "Hackathon Page", click: "https://devpost.com/software/liar-s-dice-8qen14?ref_content=my-projects-tab&ref_feature=my_projects"}
+	// 	]
+	// }, 
 	// Jeopardy
-	{
-		title: "Python Jeopardy Game", 
-		dates: "Jun 2021",
-		media: "pythonMenu.jpg", 
-		description: [
-			"Includes file to change questions and incorrect answer options are randomized.", 
-			"Keeps track of answered questions and tallys score.", 
-			"Contains multiple game screens for start menu, game menu, questions, and end menu.",
-			"Created as an example game for the students of the UCF Computer Science Summer Institute."
-		], 
-		skills: ["Python", "PyGame"], 
-		links: [
-			{label: "Github", click: "https://github.com/GabyShamblin/Examples/tree/master/Python%20Jeopardy%20Game"}
-		]
-	}
+	// {
+	// 	title: "Python Jeopardy Game", 
+	// 	dates: "Jun 2021",
+	// 	media: "pythonMenu.jpg", 
+	// 	description: [
+	// 		"Includes file to change questions and incorrect answer options are randomized.", 
+	// 		"Keeps track of answered questions and tallys score.", 
+	// 		"Contains multiple game screens for start menu, game menu, questions, and end menu.",
+	// 		"Created as an example game for the students of the UCF Computer Science Summer Institute."
+	// 	], 
+	// 	skills: ["Python", "PyGame"], 
+	// 	links: [
+	// 		{label: "Github", click: "https://github.com/GabyShamblin/Examples/tree/master/Python%20Jeopardy%20Game"}
+	// 	]
+	// }
 ];
 
 export default projects;
