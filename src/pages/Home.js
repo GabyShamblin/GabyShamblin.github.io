@@ -227,6 +227,19 @@ function Home() {
 					<h2>Recent Projects</h2>
 					<Projects/>
 				</section>
+
+				<div className='spacer'></div>
+				<section id='experience'>
+					<h2>Experience</h2>
+					<Experience/>
+				</section>
+
+				<div className='spacer'></div>
+				<section id='education'>
+					<h2>Education</h2>
+					<Education/>
+				</section>
+
 				<div className='spacer'></div>
 				<section id='contact'>
 					<h2>Contact Me!</h2>
