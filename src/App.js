@@ -1,11 +1,12 @@
 import * as React from 'react';
-import { AppBar, Box, Container, IconButton, Menu, MenuItem, Toolbar, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import MenuIcon from '@mui/icons-material/Menu';
 import { Outlet, Link } from "react-router-dom";
 import { HashLink } from 'react-router-hash-link';
 
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+
+import { Socials } from './pages/Contact.js';
 
 const MenuText = styled(Typography)(() => ({
 	fontFamily: 'monospace',
@@ -69,7 +70,7 @@ function App() {
 					x: 0}}>
 
 					{/* { notHome &&
-						<Link to="/" onClick={() => setPath('/')} style={{textDecoration: 'none'}}>
+						<Link href="/" onClick={() => setPath('/')} style={{textDecoration: 'none'}}>
 							<MenuText>
 								<div className='banner-align'>
 									<ArrowBackIosIcon/> Back
@@ -114,7 +115,7 @@ function App() {
 									>
 										{pages.map((page) => (
 											<MenuItem sx={{p:0.5, px:1, mr:0.2}}>
-												<Link to={"/" + (page==='home' ? '' : page)} 
+												<Link href={"/" + (page==='home' ? '' : page)} 
 													onClick={() => setPath('/' + (page==='home' ? '' : page))} 
 													style={{textDecoration: 'none'}}
 												>
@@ -131,7 +132,7 @@ function App() {
 								<Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'center' }}>
 									{pages.map((page) => (
 										<Box sx={{p:0.5, px:1, mr:0.2}}>
-											<Link to={"/" + (page==='home' ? '' : page)} 
+											<Link href={"/" + (page==='home' ? '' : page)} 
 												onClick={() => setPath('/' + (page==='home' ? '' : page))} 
 												style={{textDecoration: 'none'}}
 											>
@@ -154,6 +155,11 @@ function App() {
 						<ArrowBackIosIcon fontSize='large'/>
 					</UpArrow>
 				</HashLink>
+
+				{/* <footer>
+					<Socials/>
+					<p className='subtitle'>&#169; Gabriela Shamblin {new Date().getFullYear()}</p>
+				</footer> */}
 
 				<Outlet />
 			</div>

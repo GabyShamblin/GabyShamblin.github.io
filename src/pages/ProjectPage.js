@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { styled } from '@mui/material/styles';
-import { Box, Button, Chip, Grid,	Link, List, ListItem, Typography } from '@mui/material';
+import { Box, Button, Chip, Grid,	List, ListItem, Typography } from '@mui/material';
 import './css/App.css';
 import './css/typing.css';
 
@@ -112,13 +112,12 @@ function ProjectPage() {
 				<div className='half-spacer'></div>
 
 				<h3 className='subtitle'>Project pages are a work in progress</h3>
-				<Grid container spacing={1} className='text-desc' sx={{margin: '10px'}}>
-					<Grid size={{xs: 12, sm: 6}}>
-						<p>{project.description[0]}</p>
-					</Grid>
-					<Grid size='grow'>
-						<p>{project.description[1]}</p>
-					</Grid>
+				<Grid container className='text-desc' sx={{margin: '10px'}}>
+					{project.description.map(desc => (
+						<Grid size="12">
+							<p>{desc}</p>
+						</Grid>
+					))}
 				</Grid>
 
 				<Grid container>
