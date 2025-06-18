@@ -72,14 +72,21 @@ const education = [
 		location: "Orlando, FL",
 		graduation: "May 2025",
 		degree: "Master of Science, Computer Science",
-		concentration: "Mixed Reality Certificate",
-		gpa: "3.6/4.0"
+		extras: [
+			"Thesis on \"The Impact of Visualization Styles on Movement Imitation Accuracy in Virtual Reality\"",
+			"Mixed Reality Certificate",
+			"GPA: 3.6/4.0"
+		],
+		link: "https://www.parchment.com/u/award/edfa02d6d8bcc242dbdee5a440db63c7"
 	}, {
 		school: "University of Central Florida", 
 		location: "Orlando, FL",
 		graduation: "Dec 2023",
 		degree: "Bachelor of Science, Computer Science",
-		gpa: "3.7/4.0"
+		extras: [
+			"GPA: 3.7/4.0"
+		],
+		link: "https://www.parchment.com/u/award/4bbe704c6e51d502b40acd5392d7172c"
 	}
 ];
 

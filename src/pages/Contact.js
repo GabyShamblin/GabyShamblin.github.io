@@ -1,10 +1,11 @@
 import * as React from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { styled } from '@mui/material/styles';
-import { Box, Button, Grid, IconButton, Typography, Stack, TextField } from '@mui/material';
+import { Grid, Typography, Stack } from '@mui/material';
 import { flexbox } from '@mui/system';
 import './css/typing.css';
+
+import { CustomIconButton, CustomBox, CustomButton, CustomTextField } from './Styled.js';
 
 import EmailIcon from '@mui/icons-material/Email';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -12,93 +13,6 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 
 import emailjs from '@emailjs/browser';
-
-const CustomBox = styled(Box)(({link = false}) => ({
-  maxWidth: 1200, 
-	color: 'white',
-	m: 'auto',
-	p: 1,
-	fontSize: '18px',
-	borderRadius: 10,
-	transition: '0.2s',
-	'&:hover': {
-		color: "#ffffff",
-		backgroundColor: link ? 'rgba(3, 152, 175, 0.15)' : 'rgba(3, 152, 175, 0)'
-	}
-	// border: '2px dashed red'
-}));
-
-const CustomButton = styled(Button)(() => ({
-	minWidth: 100,
-	backgroundColor: "rgba(2, 232, 232, 0.2)", 
-	color: '#02e8e8', 
-	border: '2px solid #02e8e8',
-	borderRadius: 50,
-	'&:hover': {
-		backgroundColor: "rgba(2, 232, 232, 0)",
-	}
-}));
-
-const CustomIconButton = styled(IconButton)(() => ({
-	color: "#d1d1d1", 
-	borderRadius: 50,
-	'&:hover': {
-		color: "white", 
-	}
-}));
-
-const CustomTextField = styled(TextField)(() => ({
-	input: {
-		color: 'white'
-	},
-	"& .MuiInput-root": {
-		color: "#000",
-		fontFamily: "Arial",
-		fontWeight: "bold",
-		// Bottom border
-		"&:before": {
-			borderColor: "#d1d1d1",
-			borderWidth: "2px",
-		},
-		// Border on focus
-		"&:after": {
-			borderColor: "white",
-			borderWidth: "3px",
-		},
-		":hover:not(.Mui-focused)": {
-			"&:before": {
-				borderColor: "#fff",
-				borderWidth: "2px",
-			},
-		},
-	},
-	// Label
-	"& .MuiInputLabel-standard": {
-		color: "#d1d1d1",
-		fontWeight: "bold",
-		"&.Mui-focused": {
-			color: "white",
-		},
-		":hover:not(.Mui-focused)": {
-			"&:before": {
-				color: "#fff",
-			},
-		},
-	},
-}));
-
-const MenuText = styled(Typography)(() => ({
-	position: 'absolute',
-	top: 15,
-	left: 50,
-  maxWidth: 100,
-	fontSize: 24,
-	color: "#a3aab4",
-	transition: '0.2s',
-	'&:hover': {
-		color: "#ffffff",
-	},
-}));
 
 
 
@@ -203,7 +117,7 @@ function Socials() {
 			</Grid>
 			
 			<Grid>
-				<Link to="https://www.youtube.com/channel/UCzyOgtGvN-X7MkaP_amMYNg" 
+				<Link to="https://www.youtube.com/@gabyshamblin" 
 				target="_blank" rel="noopener">
 					<CustomIconButton aria-label='YouTube'>
 						<YouTubeIcon fontSize='large'/>

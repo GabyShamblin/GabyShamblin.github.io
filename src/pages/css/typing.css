@@ -17,16 +17,14 @@
   margin-bottom: 20px;
 }
 
-.typing-name {
-  width: 23ch;
-  animation: typing 2s steps(23), blink .5s step-end 20 alternate;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 4px solid;
+.page-header {
   font-family: monospace;
   font-size: calc(25px + 1vw) !important;
 	font-weight: 500;
-	color: #1efc0f;
+  background: linear-gradient(to top, #15a00b, #1efc0f);
+	-webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .typing-name {
@@ -35,10 +33,14 @@
   white-space: nowrap;
   overflow: hidden;
   border-right: 4px solid;
-  font-family: monospace;
-  font-size: calc(25px + 1vw) !important;
-	font-weight: 500;
-	color: #1efc0f;
+}
+
+.typing-name {
+  width: 23ch;
+  animation: typing 2s steps(23), blink .5s step-end 20 alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 4px solid;
 }
 
 .typing-home {
@@ -47,10 +49,6 @@
   white-space: nowrap;
   overflow: hidden;
   border-right: 4px solid;
-  font-family: monospace;
-  font-size: calc(25px + 1vw) !important;
-	font-weight: 500;
-	color: #1efc0f;
 }
 
 .typing-projects {
@@ -59,10 +57,6 @@
   white-space: nowrap;
   overflow: hidden;
   border-right: 4px solid;
-  font-family: monospace;
-  font-size: calc(25px + 1vw) !important;
-	font-weight: 500;
-	color: #1efc0f;
 }
 
 .typing-resume {
@@ -71,10 +65,6 @@
   white-space: nowrap;
   overflow: hidden;
   border-right: 4px solid;
-  font-family: monospace;
-  font-size: calc(25px + 1vw) !important;
-	font-weight: 500;
-	color: #1efc0f;
 }
 
 .typing-contact {
@@ -83,10 +73,6 @@
   white-space: nowrap;
   overflow: hidden;
   border-right: 4px solid;
-  font-family: monospace;
-  font-size: calc(25px + 1vw) !important;
-	font-weight: 500;
-	color: #1efc0f;
 }
 
 @keyframes typing {

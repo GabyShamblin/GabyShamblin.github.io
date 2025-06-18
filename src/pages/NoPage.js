@@ -4,6 +4,8 @@ import { flexbox } from '@mui/system';
 
 import SearchIcon from '@mui/icons-material/Search';
 
+
+
 const NoPage = () => {
 	console.log("Theres nothing");
   return (

@@ -1,8 +1,7 @@
 import * as React from 'react';
 import { useEffect } from 'react';
 import { HashLink } from 'react-router-hash-link';
-import { Box, Grid, IconButton, Stack, Typography, List, ListItem } from '@mui/material';
-import { styled } from '@mui/material/styles';
+import { Grid, List, ListItem } from '@mui/material';
 import './css/App.css';
 import './css/blobs.css';
 import './css/typing.css';
@@ -12,81 +11,10 @@ import { experience, education } from './data/resumeData.js';
 import projects from './data/projectData.js';
 import { ProjectsBox, TimelineDegree, TimelineJob } from './Boxes.js';
 import { Contact, Socials } from './Contact.js';
+import { CenterMenuText, CenterMenuLine, CustomBox } from './Styled.js';
 
 import logo from './public/logo_blue.png';
 import me from './public/picture_cruise.JPG';
-
-
-
-const MenuText = styled(Typography)(() => ({
-  width: 125,
-	fontSize: 20,
-	color: "#a3aab4",
-	textAlign: 'left',
-	transition: '0.2s',
-	'&:hover': {
-		color: "#ffffff",
-		'> div': {
-			backgroundColor: '#ffffff',
-			width: '100%',
-		},
-	},
-	// border: '1px dashed #ffffff',
-}));
-
-const MenuLine = styled('div')(({chars = 0}) => ({
-	height: '2px',
-	width: `${chars}ch`,
-	backgroundColor: '#a3aab4',
-	transition: '0.2s',
-}));
-
-const CenterMenuText = styled(Typography)(() => ({
-  width: 150,
-	margin: 'auto',
-	color: "#a3aab4",
-	textAlign: 'center',
-	transition: '0.2s',
-	'&:hover': {
-		color: "#ffffff",
-		'> div': {
-			backgroundColor: '#ffffff',
-			width: '100%',
-		},
-	},
-	// border: '1px dashed #ffffff',
-}));
-
-const CenterMenuLine = styled('div')(({chars = 0}) => ({
-	height: '2px',
-	margin: 'auto',
-	width: `${chars}ch`,
-	backgroundColor: '#a3aab4',
-	transition: '0.2s',
-}));
-
-const CustomIconButton = styled(IconButton)(() => ({
-	color: "#a3aab4", 
-	borderRadius: 50,
-	'&:hover': {
-		color: "white", 
-	}
-}));
-
-const CustomBox = styled(Box)(({link = false}) => ({
-  maxWidth: 1200, 
-	color: 'white',
-	m: 'auto',
-	p: 1,
-	fontSize: '18px',
-	borderRadius: 10,
-	transition: '0.2s',
-	'&:hover': {
-		color: "#ffffff",
-		backgroundColor: link ? 'rgba(3, 152, 175, 0.15)' : 'rgba(3, 152, 175, 0)'
-	},
-	// border: '2px dashed red'
-}));
 
 
 
@@ -105,7 +33,7 @@ function Home() {
 				<div>
 					<img src={logo} id='logo' alt='Gabriela Shamblin'/>
 				</div>
-				<div className='typing-home'>
+				<div className='page-header typing-home'>
 					/* Student & Programmer
 				</div>
 			</div> */}
@@ -121,11 +49,11 @@ function Home() {
 			<div className="App">
 				<div className='half-spacer'/>
 				<div className='wrapper'>
-					<h1 className='typing-name'>
+					<h1 className='page-header typing-name'>
 						/* Gabriela Shamblin */
 					</h1>
 					<div className='subtitle'>
-						Delivering Immersive Experiences, Solutions, and Innovation Through Cutting-Edge Development in VR Technologies
+						Master's graduate with a passion for virtual reality, full-stack development, and user-focused
 					</div>
 				</div>
 
@@ -135,67 +63,6 @@ function Home() {
 						<Grid>
 							<img id="me" src={me} alt="Me"/>
 						</Grid>
-
-						{/* Left align text and add lines with extend animation */}
-						{/* Menu Buttons */}
-						{/* <Grid container justifyContent='center' alignContent='center' direction={{xs:'row', sm:'column'}}>
-
-							<Grid sx={{p:0.5, px:1, mr:0.2}}>
-								<HashLink smooth to="/#about" 
-									style={{textDecoration: 'none'}}
-								>
-									<MenuText>
-											<strong>About</strong>
-											<MenuLine chars={5}/>
-									</MenuText>
-								</HashLink>
-							</Grid>
-
-							<Grid sx={{p:0.5, px:1, mr:0.2}}>
-								<HashLink smooth to="/#education" 
-									style={{textDecoration: 'none'}}
-								>
-									<MenuText>
-											<strong>Education</strong>
-											<MenuLine chars={10}/>
-									</MenuText>
-								</HashLink>
-							</Grid>
-
-							<Grid sx={{p:0.5, px:1, mr:0.2}}>
-								<HashLink smooth to="/#experience" 
-									style={{textDecoration: 'none'}}
-								>
-									<MenuText>
-											<strong>Experience</strong>
-											<MenuLine chars={10}/>
-									</MenuText>
-								</HashLink>
-							</Grid>
-
-							<Grid sx={{p:0.5, px:1, mr:0.2}}>
-								<HashLink smooth to="/#projects"  
-									style={{textDecoration: 'none'}}
-								>
-									<MenuText>
-											<strong>Projects</strong>
-											<MenuLine chars={7}/>
-									</MenuText>
-								</HashLink>
-							</Grid>
-
-							<Grid sx={{p:0.5, px:1, mr:0.2}}>
-								<HashLink smooth to="/#contact"  
-									style={{textDecoration: 'none'}}
-								>
-									<MenuText>
-											<strong>Contact</strong>
-											<MenuLine chars={7}/>
-									</MenuText>
-								</HashLink>
-							</Grid>
-
-						</Grid> */}
 					</Grid>
 
 					{/* Content Column */}
@@ -209,31 +76,92 @@ function Home() {
 					<Socials/>
 				</div>
 
+				{/* Left align text and add lines with extend animation */}
+				{/* Menu Buttons */}
+				<Grid container justifyContent='center' alignContent='center'>
 
-				{/* <section id='education'>
-					<Education/>
-				</section>
-				<section id='experience'>
-					<Experience/>
-				</section> */}
-				<div className='spacer'></div>
-				<section id='projects'>
-					<h2>Recent Projects</h2>
-					<Projects/>
-				</section>
+					<Grid sx={{p:0.5, px:1, mr:0.2}}>
+						<HashLink smooth to="/#about" 
+							style={{textDecoration: 'none'}}
+						>
+							<CenterMenuText>
+									<strong>About</strong>
+									<CenterMenuLine chars={5}/>
+							</CenterMenuText>
+						</HashLink>
+					</Grid>
 
+					<Grid sx={{p:0.5, px:1, mr:0.2}}>
+						<HashLink smooth to="/#education" 
+							style={{textDecoration: 'none'}}
+						>
+							<CenterMenuText>
+									<strong>Education</strong>
+									<CenterMenuLine chars={10}/>
+							</CenterMenuText>
+						</HashLink>
+					</Grid>
+
+					<Grid sx={{p:0.5, px:1, mr:0.2}}>
+						<HashLink smooth to="/#experience" 
+							style={{textDecoration: 'none'}}
+						>
+							<CenterMenuText>
+									<strong>Experience</strong>
+									<CenterMenuLine chars={10}/>
+							</CenterMenuText>
+						</HashLink>
+					</Grid>
+
+					<Grid sx={{p:0.5, px:1, mr:0.2}}>
+						<HashLink smooth to="/#projects"  
+							style={{textDecoration: 'none'}}
+						>
+							<CenterMenuText>
+									<strong>Projects</strong>
+									<CenterMenuLine chars={7}/>
+							</CenterMenuText>
+						</HashLink>
+					</Grid>
+
+					<Grid sx={{p:0.5, px:1, mr:0.2}}>
+						<HashLink smooth to="/#contact"  
+							style={{textDecoration: 'none'}}
+						>
+							<CenterMenuText>
+									<strong>Contact</strong>
+									<CenterMenuLine chars={7}/>
+							</CenterMenuText>
+						</HashLink>
+					</Grid>
+
+				</Grid>
+
+
+				{/* Experience */}
 				<div className='spacer'></div>
 				<section id='experience'>
 					<h2>Experience</h2>
 					<Experience/>
 				</section>
 
+				{/* Education */}
 				<div className='spacer'></div>
 				<section id='education'>
 					<h2>Education</h2>
 					<Education/>
 				</section>
 
+				{/* Skills */}
+
+				{/* Projects */}
+				<div className='spacer'></div>
+				<section id='projects'>
+					<h2>Recent Projects</h2>
+					<Projects/>
+				</section>
+
+				{/* Contact */}
 				<div className='spacer'></div>
 				<section id='contact'>
 					<h2>Contact Me!</h2>

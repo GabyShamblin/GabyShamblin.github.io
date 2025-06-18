@@ -1,85 +1,11 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
-import { styled } from '@mui/material/styles';
-import { Box, Button, Chip, Grid, Typography, List, ListItem } from '@mui/material';
-// import SkillSlider from './SkillSlider';
+import { Grid, Typography, List, ListItem } from '@mui/material';
 import './css/typing.css';
 
-import CircleIcon from '@mui/icons-material/Circle';
+import { CustomBox, ListGrid, ListDate, SkillChip, TimelineCircle, LogoCircle } from './Styled.js';
 
 
-
-const CustomButton = styled(Button)(() => ({
-	minWidth: 200,
-	backgroundColor: "rgba(2, 232, 232, 0.2)", 
-	color: '#02e8e8', 
-	border: '2px solid #02e8e8',
-	borderRadius: 50,
-	'&:hover': {
-		backgroundColor: "rgba(2, 232, 232, 0)",
-	}
-}));
-
-const CustomBox = styled(Box)(({link = false}) => ({
-	maxWidth: 1200, 
-	color: 'white',
-	m: 'auto',
-	p: 1,
-	fontSize: '18px',
-	borderRadius: 10,
-	transition: '0.2s',
-	'&:hover': {
-		color: "#ffffff",
-		backgroundColor: link ? 'rgba(3, 152, 175, 0.15)' : 'rgba(3, 152, 175, 0)'
-	},
-	// border: '2px dashed red'
-}));
-
-const ListGrid = styled(Grid)(({project = false}) => ({
-	textAlign: 'left', 
-	borderLeft: project ? '5px solid rgba(3, 152, 175, 0)' : '5px solid rgba(2, 232, 232, 0.5)',
-}));
-
-const ListDate = styled('div')(() => ({
-	color: '#d1d1d1',
-	fontSize: '16px',
-	textAlign: 'right'
-}));
-
-const SkillChip = styled(Chip)(() => ({
-	margin: 3,
-	color: '#1efc0f',
-	backgroundColor: 'rgba(30, 252, 15, 0.2)',
-	border: '2px solid #1efc0f',
-}));
-
-const TimelineCircle = styled(CircleIcon)(() => ({
-	position: 'absolute',
-	color: '#027f8c',
-	top: 0,
-	right: '-31px',
-}));
-
-const LogoCircle = styled('div')(() => ({
-	display: 'inline-flex',
-	justifyContent: 'center',
-	alignItems: 'center',
-	backgroundColor: 'white',
-	borderRadius: 50
-}));
-
-const MenuText = styled(Typography)(() => ({
-	position: 'absolute',
-	top: 15,
-	left: 50,
-	maxWidth: 100,
-	fontSize: 24,
-	color: "#a3aab4",
-	transition: '0.2s',
-	'&:hover': {
-		color: "#ffffff",
-	},
-}));
 
 // Using the first three letters of the mont, return the index of that month (0-11)
 function StringToDate(month) {
@@ -156,7 +82,7 @@ function ProjectsBox(props) {
 						<Grid size={{xs: 12, sm: 2}} justifyContent='center'>
 							<img src={require(`./public/thumbnails/${project.media}`)} id='thumbnail' alt='Project' className='center'/>
 						</Grid>	
-						<ListGrid size="grow" project={true} pl={2} ml={2}>
+						<ListGrid size="grow" blue={true} pl={2} ml={2}>
 							<div>
 								{project.title}
 							</div>
@@ -205,18 +131,11 @@ function TimelineDegree(props) {
 						{degree.degree} | <i>{degree.school}</i>
 					</div>
 					<List dense className='text-desc'>
-						{degree.concentration ? (
+						{degree.extras.map(extra => (
 							<ListItem>
-								{degree.concentration}
+								{extra}
 							</ListItem>
-						) : (<div/>)}
-						{degree.gpa ? (
-							<ListItem>
-								GPA: {degree.gpa}
-							</ListItem>
-						) : (
-							<div/>
-						)}
+						))}
 					</List>
 				</ListGrid>
 			</Grid>

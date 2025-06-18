@@ -1,56 +1,16 @@
 import * as React from 'react';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { styled } from '@mui/material/styles';
-import { Box, Button, Grid, Typography } from '@mui/material';
+import { Grid, Typography } from '@mui/material';
 import './css/typing.css';
 
 import { experience, education, skills, certs } from './data/resumeData.js';
 import { TimelineDegree, TimelineJob, SkillSection, Cert } from './Boxes.js';
+import { CustomBox, CustomButton } from './Styled.js';
 
 import FeedIcon from '@mui/icons-material/Feed';
 import resume from './public/Gabriela Shamblin Resume 2025.pdf';
 
-
-
-const CustomButton = styled(Button)(() => ({
-	minWidth: 200,
-	backgroundColor: "rgba(2, 232, 232, 0.2)", 
-	color: '#02e8e8', 
-	border: '2px solid #02e8e8',
-	borderRadius: 50,
-	'&:hover': {
-		backgroundColor: "rgba(2, 232, 232, 0)",
-	}
-}));
-
-const CustomBox = styled(Box)(({link = false}) => ({
-  maxWidth: 1200, 
-	color: 'white',
-	m: 'auto',
-	p: 1,
-	fontSize: '18px',
-	borderRadius: 10,
-	transition: '0.2s',
-	'&:hover': {
-		color: "#ffffff",
-		backgroundColor: link ? 'rgba(3, 152, 175, 0.15)' : 'rgba(3, 152, 175, 0)'
-	},
-	// border: '2px dashed red'
-}));
-
-const MenuText = styled(Typography)(() => ({
-	position: 'absolute',
-	top: 15,
-	left: 50,
-  maxWidth: 100,
-	fontSize: 24,
-	color: "#a3aab4",
-	transition: '0.2s',
-	'&:hover': {
-		color: "#ffffff",
-	},
-}));
 
 
 function Resume() {
@@ -62,7 +22,7 @@ function Resume() {
 		<div className="App">
 
 			<div className='wrapper'>
-				<div className='typing-resume'>
+				<div className='page-header typing-resume'>
 					/* Resume */
 				</div>
 			</div>
@@ -139,7 +99,5 @@ function Resume() {
 		</div>
   );
 }
-
-
 
 export default Resume;

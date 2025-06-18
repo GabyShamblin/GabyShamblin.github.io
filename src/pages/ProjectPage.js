@@ -1,65 +1,13 @@
 import * as React from 'react';
 import { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { styled } from '@mui/material/styles';
-import { Box, Button, Chip, Grid,	List, ListItem, Typography } from '@mui/material';
+import { Grid } from '@mui/material';
 import './css/App.css';
 import './css/typing.css';
 
 import projects from './data/projectData.js';
+import { CustomButton, SkillChip } from './Styled.js';
 
-
-
-const CustomBox = styled(Box)(({link = false}) => ({
-	maxWidth: 1200, 
-	color: 'white',
-	m: 'auto',
-	p: 1,
-	fontSize: '18px',
-	borderRadius: 10,
-	transition: '0.2s',
-	'&:hover': {
-		color: "#ffffff",
-		backgroundColor: link ? 'rgba(3, 152, 175, 0.15)' : 'rgba(3, 152, 175, 0)'
-	}
-	// border: '2px dashed red'
-}));
-
-const CustomButton = styled(Button)(() => ({
-	minWidth: 100,
-	backgroundColor: "rgba(2, 232, 232, 0.2)", 
-	color: '#02e8e8', 
-	border: '2px solid #02e8e8',
-	borderRadius: 50,
-	'&:hover': {
-		backgroundColor: "rgba(2, 232, 232, 0)",
-	}
-}));
-
-const ListGrid = styled(Grid)(({project = false}) => ({
-	textAlign: 'left', 
-	borderLeft: project ? '5px solid rgba(3, 152, 175, 0)' : '5px solid rgba(3, 152, 175, 0.5)',
-}));
-
-const SkillChip = styled(Chip)(() => ({
-	margin: 3,
-	color: '#1efc0f',
-	backgroundColor: 'rgba(30, 252, 15, 0.2)',
-	border: '2px solid #1efc0f',
-}));
-
-const MenuText = styled(Typography)(() => ({
-	position: 'absolute',
-	top: 15,
-	left: 50,
-	maxWidth: 100,
-	fontSize: 24,
-	color: "#a3aab4",
-	transition: '0.2s',
-	'&:hover': {
-		color: "#ffffff",
-	},
-}));
 
 
 function GetProjectFromId(id) {
@@ -69,7 +17,6 @@ function GetProjectFromId(id) {
 		}
 	}
 }
-
 
 function ProjectPage() {
 	const { id } = useParams();
@@ -112,10 +59,14 @@ function ProjectPage() {
 				<div className='half-spacer'></div>
 
 				<h3 className='subtitle'>Project pages are a work in progress</h3>
-				<Grid container className='text-desc' sx={{margin: '10px'}}>
+				<Grid container className='text-desc' spacing={1}>
 					{project.description.map(desc => (
-						<Grid size="12">
-							<p>{desc}</p>
+						<Grid size={{xs:12, sm:6}}>
+							<p>{desc.split('\n').map((line, i) => (
+								<React.Fragment key={i}>
+									{line}<br/><br/>
+								</React.Fragment>
+							))}</p>
 						</Grid>
 					))}
 				</Grid>
@@ -135,6 +86,5 @@ function ProjectPage() {
 		</React.Fragment>
 	);
 }
-
 
 export default ProjectPage;
