@@ -22,6 +22,7 @@
   margin: auto;
   position: relative;
   z-index: 2;
+  font-size: calc(15px + 0.390625vw);
   /* background-color: #010a1a; */
 }
 
@@ -44,8 +45,17 @@ h2 {
   color: white;
 }
 
+.sticky-navbar {
+  position: sticky;
+  top: 0px;
+  padding: 20px;
+  backdrop-filter: blur(7px);
+  /* background-color: rgba(255, 255, 255, 0.3);  */
+  z-index: 1;
+}
+
 .text-header {
-  font-size: 20px;
+  font-size: calc(25px + 1vw) !important;
   font-weight: bolder;
 }
 

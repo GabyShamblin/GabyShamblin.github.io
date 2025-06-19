@@ -27,6 +27,12 @@ function Home() {
 		setPath(window.location.pathname);
 	}
 
+	const scrollWithOffset = (el) => {
+		const yOffset = -80;
+		const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+		window.scrollTo({ top: y, behavior: 'smooth' });
+	}
+
   return (
 		<div>
 			{/* <div className='wrapper'>
@@ -53,10 +59,11 @@ function Home() {
 						/* Gabriela Shamblin */
 					</h1>
 					<div className='subtitle'>
-						Master's graduate with a passion for virtual reality, full-stack development, and user-focused
+						Developer with a passion for virtual reality, full-stack development, and user-focused design
 					</div>
 				</div>
 
+				{/* About section */}
 				<Grid container spacing={1}>
 					<Grid container size={{xs:12, sm:3}} spacing={1} justifyContent='center' alignItems='center' direction='column'>
 						{/* Picture */}
@@ -72,71 +79,73 @@ function Home() {
 						</section>
 					</Grid>
 				</Grid>
+
 				<div>
 					<Socials/>
 				</div>
 
-				{/* Left align text and add lines with extend animation */}
+				<div className='half-spacer'/>
+
 				{/* Menu Buttons */}
-				<Grid container justifyContent='center' alignContent='center'>
+				<div class='sticky-navbar'>
+					<Grid container spacing={1} justifyContent='space-evenly' alignContent='center'>
 
-					<Grid sx={{p:0.5, px:1, mr:0.2}}>
-						<HashLink smooth to="/#about" 
-							style={{textDecoration: 'none'}}
-						>
-							<CenterMenuText>
-									<strong>About</strong>
-									<CenterMenuLine chars={5}/>
-							</CenterMenuText>
-						</HashLink>
+						{/* <Grid>
+							<HashLink smooth to="/#about" style={{textDecoration: 'none'}}>
+								<CenterMenuText>
+										<strong>About</strong>
+										<CenterMenuLine chars={6}/>
+								</CenterMenuText>
+							</HashLink>
+						</Grid> */}
+
+						<Grid>
+							<HashLink smooth to="/#experience" scroll={scrollWithOffset} style={{textDecoration: 'none'}}>
+								<CenterMenuText>
+										<strong>Experience</strong>
+										<CenterMenuLine chars={10}/>
+								</CenterMenuText>
+							</HashLink>
+						</Grid>
+
+						<Grid>
+							<HashLink smooth to="/#education" scroll={scrollWithOffset} style={{textDecoration: 'none'}}>
+								<CenterMenuText>
+										<strong>Education</strong>
+										<CenterMenuLine chars={9}/>
+								</CenterMenuText>
+							</HashLink>
+						</Grid>
+
+						<Grid>
+							<HashLink smooth to="/#projects" scroll={scrollWithOffset} style={{textDecoration: 'none'}}>
+								<CenterMenuText>
+										<strong>Projects</strong>
+										<CenterMenuLine chars={8}/>
+								</CenterMenuText>
+							</HashLink>
+						</Grid>
+
+						{/* <Grid>
+							<HashLink smooth to="/#projects" scroll={scrollWithOffset} style={{textDecoration: 'none'}}>
+								<CenterMenuText>
+										<strong>Skills</strong>
+										<CenterMenuLine chars={5}/>
+								</CenterMenuText>
+							</HashLink>
+						</Grid> */}
+
+						<Grid>
+							<HashLink smooth to="/#contact" scroll={scrollWithOffset} style={{textDecoration: 'none'}}>
+								<CenterMenuText>
+										<strong>Contact</strong>
+										<CenterMenuLine chars={7}/>
+								</CenterMenuText>
+							</HashLink>
+						</Grid>
+
 					</Grid>
-
-					<Grid sx={{p:0.5, px:1, mr:0.2}}>
-						<HashLink smooth to="/#education" 
-							style={{textDecoration: 'none'}}
-						>
-							<CenterMenuText>
-									<strong>Education</strong>
-									<CenterMenuLine chars={10}/>
-							</CenterMenuText>
-						</HashLink>
-					</Grid>
-
-					<Grid sx={{p:0.5, px:1, mr:0.2}}>
-						<HashLink smooth to="/#experience" 
-							style={{textDecoration: 'none'}}
-						>
-							<CenterMenuText>
-									<strong>Experience</strong>
-									<CenterMenuLine chars={10}/>
-							</CenterMenuText>
-						</HashLink>
-					</Grid>
-
-					<Grid sx={{p:0.5, px:1, mr:0.2}}>
-						<HashLink smooth to="/#projects"  
-							style={{textDecoration: 'none'}}
-						>
-							<CenterMenuText>
-									<strong>Projects</strong>
-									<CenterMenuLine chars={7}/>
-							</CenterMenuText>
-						</HashLink>
-					</Grid>
-
-					<Grid sx={{p:0.5, px:1, mr:0.2}}>
-						<HashLink smooth to="/#contact"  
-							style={{textDecoration: 'none'}}
-						>
-							<CenterMenuText>
-									<strong>Contact</strong>
-									<CenterMenuLine chars={7}/>
-							</CenterMenuText>
-						</HashLink>
-					</Grid>
-
-				</Grid>
-
+				</div>
 
 				{/* Experience */}
 				<div className='spacer'></div>

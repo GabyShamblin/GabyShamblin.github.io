@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Grid, Typography, List, ListItem } from '@mui/material';
 import './css/typing.css';
 
-import { CustomBox, ListGrid, ListDate, SkillChip, TimelineCircle, LogoCircle } from './Styled.js';
+import { CustomBox, ListGrid, ListDate, SkillChip, TimelineCircle, Circle } from './Styled.js';
 
 
 
@@ -212,9 +212,9 @@ function Logo(props) {
 	return (
 		<Grid direction="row">
 			{skill.background ? (
-				<LogoCircle>
+				<Circle>
 					<img id='logo' src={skill.media} alt={skill.name}/>
-				</LogoCircle>) : (
+				</Circle>) : (
 				<img id='logo' src={skill.media} alt={skill.name}/>
 			)}
 			<Typography>{skill.name}</Typography>

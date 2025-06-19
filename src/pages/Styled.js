@@ -1,43 +1,41 @@
-import * as React from 'react';
-import { Link } from 'react-router-dom';
 import { styled } from '@mui/material/styles';
 import { Box, Button, Chip, Grid, IconButton, TextField, Typography } from '@mui/material';
-// import SkillSlider from './SkillSlider';
 import './css/typing.css';
 
 import CircleIcon from '@mui/icons-material/Circle';
 
 
+
 /* ----- Buttons ----- */
 
-// Text for a button menu
-const MenuText = styled(Typography)(() => ({
-  width: 125,
-	fontSize: 20,
-	color: "#a3aab4",
-	textAlign: 'left',
+// A blue button
+const CustomButton = styled(Button)(() => ({
+	minWidth: 200,
+	backgroundColor: "rgba(2, 232, 232, 0.2)", 
+	color: '#02e8e8', 
+	border: '2px solid #02e8e8',
+	borderRadius: 50,
 	transition: '0.2s',
 	'&:hover': {
-		color: "#ffffff",
-		'> div': {
-			backgroundColor: '#ffffff',
-			width: '100%',
-		},
-	},
-	// border: '1px dashed #ffffff',
+		backgroundColor: "rgba(2, 232, 232, 0)",
+	}
 }));
 
-// A line that expands when hovered over when paired with MenuText
-const MenuLine = styled('div')(({chars = 0}) => ({
-	height: '2px',
-	width: `${chars}ch`,
-	backgroundColor: '#a3aab4',
+// A circular icon button
+const CustomIconButton = styled(IconButton)(() => ({
+	color: "#d1d1d1", 
+	borderRadius: 50,
 	transition: '0.2s',
+	'&:hover': {
+		color: "white", 
+	}
 }));
 
 // Centered text for a button menu
 const CenterMenuText = styled(Typography)(() => ({
-  width: 150,
+	width: '100%',
+	minWidth: '10vw',
+	fontSize: 'calc(15px + 0.5vw)',
 	margin: 'auto',
 	color: "#a3aab4",
 	textAlign: 'center',
@@ -61,32 +59,37 @@ const CenterMenuLine = styled('div')(({chars = 0}) => ({
 	transition: '0.2s',
 }));
 
-// A blue button
-const CustomButton = styled(Button)(() => ({
-	minWidth: 200,
-	backgroundColor: "rgba(2, 232, 232, 0.2)", 
-	color: '#02e8e8', 
-	border: '2px solid #02e8e8',
-	borderRadius: 50,
+// Text for a button menu
+const MenuText = styled(Typography)(() => ({
+	width: 125,
+	fontSize: 20,
+	color: "#a3aab4",
+	textAlign: 'left',
+	transition: '0.2s',
 	'&:hover': {
-		backgroundColor: "rgba(2, 232, 232, 0)",
-	}
+		color: "#ffffff",
+		'> div': {
+			backgroundColor: '#ffffff',
+			width: '100%',
+		},
+	},
+	// border: '1px dashed #ffffff',
 }));
 
-// A circular icon button
-const CustomIconButton = styled(IconButton)(() => ({
-	color: "#d1d1d1", 
-	borderRadius: 50,
-	'&:hover': {
-		color: "white", 
-	}
+// A line that expands when hovered over when paired with MenuText
+const MenuLine = styled('div')(({chars = 0}) => ({
+	height: '2px',
+	width: `${chars}ch`,
+	backgroundColor: '#a3aab4',
+	transition: '0.2s',
 }));
 
 
 /* ----- Organization ----- */
 
+// Box for keeping things uniform
 const CustomBox = styled(Box)(({link = false}) => ({
-	maxWidth: 1200, 
+	maxWidth: '95vw',
 	color: 'white',
 	m: 'auto',
 	p: 1,
@@ -100,6 +103,7 @@ const CustomBox = styled(Box)(({link = false}) => ({
 	// border: '2px dashed red'
 }));
 
+// Grid used for keeping lists organized
 const ListGrid = styled(Grid)(({blue = false}) => ({
 	textAlign: 'left', 
 	borderLeft: blue ? '5px solid rgba(3, 152, 175, 0)' : '5px solid rgba(2, 232, 232, 0.5)',
@@ -108,6 +112,7 @@ const ListGrid = styled(Grid)(({blue = false}) => ({
 
 /* ----- Text ----- */
 
+// Keep text uniform
 const Text = styled(Typography)(() => ({
 	position: 'absolute',
 	top: 15,
@@ -121,6 +126,7 @@ const Text = styled(Typography)(() => ({
 	},
 }));
 
+// Colored text field for text input
 const CustomTextField = styled(TextField)(() => ({
 	input: {
 		color: 'white'
@@ -164,12 +170,14 @@ const CustomTextField = styled(TextField)(() => ({
 
 /* ----- Other ----- */
 
+// Organizes dates on the left of timelines
 const ListDate = styled('div')(() => ({
 	color: '#d1d1d1',
 	fontSize: '16px',
 	textAlign: 'right'
 }));
 
+// A non-clickable chip for displaying small bits of information
 const SkillChip = styled(Chip)(() => ({
 	margin: 3,
 	color: '#1efc0f',
@@ -177,6 +185,7 @@ const SkillChip = styled(Chip)(() => ({
 	border: '2px solid #1efc0f',
 }));
 
+// A circle icon for timelines
 const TimelineCircle = styled(CircleIcon)(() => ({
 	position: 'absolute',
 	color: '#027f8c',
@@ -184,7 +193,8 @@ const TimelineCircle = styled(CircleIcon)(() => ({
 	right: '-31px',
 }));
 
-const LogoCircle = styled('div')(() => ({
+// A white circle to put behind transparent images if they are too dark
+const Circle = styled('div')(() => ({
 	display: 'inline-flex',
 	justifyContent: 'center',
 	alignItems: 'center',
@@ -194,4 +204,4 @@ const LogoCircle = styled('div')(() => ({
 
 
 
-export { MenuText, MenuLine, CenterMenuText, CenterMenuLine, CustomIconButton, CustomBox, CustomButton, CustomTextField, ListGrid, ListDate, SkillChip, TimelineCircle, LogoCircle };
+export { MenuText, MenuLine, CenterMenuText, CenterMenuLine, CustomIconButton, CustomBox, CustomButton, CustomTextField, ListGrid, ListDate, SkillChip, TimelineCircle, Circle };

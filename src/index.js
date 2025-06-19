@@ -1,4 +1,3 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { HashRouter, Routes, Route } from "react-router-dom";
 import './index.css';
@@ -7,7 +6,6 @@ import reportWebVitals from './reportWebVitals';
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import ProjectPage from "./pages/ProjectPage";
-import Heart from "./pages/Heart";
 import Resume from "./pages/Resume";
 import { Contact } from "./pages/Contact";
 import NoPage from "./pages/NoPage";
@@ -23,7 +21,6 @@ root.render(
 				<Route path="projects/:id" element={<ProjectPage />} />
 				<Route path="resume" element={<Resume />} />
 				<Route path="contact" element={<Contact />} />
-				<Route path="heart" element={<Heart />} />
 				<Route path="*" element={<NoPage />} />
 			</Route>
 		</Routes>
