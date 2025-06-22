@@ -4,8 +4,10 @@ const projects = [
 		id: "thesis",
 		title: "Thesis",
 		dates: "Jan 2024 - Apr 2025",
-		media: "thesis-thumb.png",
-		summary: "A research project that aims to find how different controller visualizations impact how users follow a given movement",
+		media: [
+			"thesis-thumb.png"
+		],
+		summary: "\"The Impact of Visualization Styles on Movement Imitation Accuracy in Virtual Reality\"",
 		description: [
 			"Virtual reality (VR) has become a powerful tool for motor learning and skill acquisition, offering immersive environments for users to practice and refine movements. This thesis investigates how different visualization styles in VR affect movement imitation accuracy, specifically focusing on hand movements. While prior research has explored precise alignment and visualization individually, few studies have examined their combined impact. This study addresses that gap by evaluating the effectiveness of various visualization methods in relation to offset, animation, and manual type.\nWe developed an application to ensure all participants experienced each visualization factor as 12 combinations in varied sequences. The user study conducted with 30 participants combined performance data with responses from the qualification, between trial, and end of experiment questionnaires. Movement data assessed performance accuracy, and questionnaire data captured user perception.\nThe results indicate that manual type significantly affects user satisfaction and accuracy (p < 0.001), with the unimanual condition yielding the highest accuracy. Animation style also had a significant effect (p < 0.001), with discrete animations improving accuracy compared to continuous animations. Offset had no significant effect on accuracy, but users did prefer closer visualizations.\nThese findings provide valuable insights into VR-based motor learning applications. By using discrete animation and close-up visuals, developers can enhance the effectiveness of movement learning tools. This could have a direct impact on careers where muscle memory is a necessity. Future research could explore applications in rehabilitation, training, and remote teleoperation to optimize VR-guided motor tasks. Research could also evaluate the impact of visualization design in VR on real-world applications."
 		],
@@ -37,7 +39,9 @@ const projects = [
 		id: "escape-room",
 		title: "VR Escape Room", 
 		dates: "Jan - Apr 2024",
-		media: "mr-thumb.png", 
+		media: [
+			"mr-thumb.png"
+		], 
 		summary: "A group virtual reality escape room project",
 		description: [
 			"A group project with 5 people for CAP 6117: Mixed Reality Project.", 
@@ -70,7 +74,9 @@ const projects = [
 		id: "ar",
 		title: "Augmented Reality Engineering", 
 		dates: "Aug - Dec 2023",
-		media: "ar-thumb.png", 
+		media: [
+			"ar-thumb.png"
+		], 
 		summary: "A series of six augmented reality projects covering multiple topics",
 		description: [
 			"Six Unity projects on different topics created for CAP 6110: Augmented Reality Engineering.", 
@@ -86,7 +92,9 @@ const projects = [
 		id: "sense-rator",
 		title: "SenseRator", 
 		dates: "Feb - Dec 2023",
-		media: "senserator-thumb.jpg", 
+		media: [
+			"senserator-thumb.jpg"
+		], 
 		summary: "A group senior design project which performs object detection and semantic segmentation on camera data",
 		description: [
 			"A group project of 5 people for COP 4934/4935: Senior Design.", 
@@ -121,7 +129,9 @@ const projects = [
 		id: "vr",
 		title: "Virtual Reality Engineering", 
 		dates: "Jan - Apr 2023",
-		media: "vr-thumb.png", 
+		media: [
+			"vr-thumb.png"
+		], 
 		summary: "A series of six virtual reality projects covering multiple topics",
 		description: [
 			"Six Unity projects on different topics created for CAP 5115: Virtual Reality Engineering.", 
@@ -137,7 +147,9 @@ const projects = [
 		id: "top-schedule",
 		title: "Top of the Schedule", 
 		dates: "Feb - Apr 2022",
-		media: "scheduler.jpg", 
+		media: [
+			"scheduler.jpg"
+		], 
 		summary: "A group project of a custom schedule builder for the UCF computer science program",
 		description: [
 			"A group project with 7 people for COP 4311: Processes of Object-Oriented Software Development.", 

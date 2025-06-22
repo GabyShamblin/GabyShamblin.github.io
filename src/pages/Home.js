@@ -84,11 +84,11 @@ function Home() {
 					<Socials/>
 				</div>
 
-				<div className='half-spacer'/>
+				<div className='spacer'/>
 
 				{/* Menu Buttons */}
 				<div class='sticky-navbar'>
-					<Grid container spacing={1} justifyContent='space-evenly' alignContent='center'>
+					<Grid container spacing={1} justifyContent='space-evenly'>
 
 						{/* <Grid>
 							<HashLink smooth to="/#about" style={{textDecoration: 'none'}}>
@@ -146,37 +146,36 @@ function Home() {
 
 					</Grid>
 				</div>
+				<div className='spacer'></div>
 
 				{/* Experience */}
-				<div className='spacer'></div>
 				<section id='experience'>
 					<h2>Experience</h2>
 					<Experience/>
 				</section>
+				<div className='spacer'></div>
 
 				{/* Education */}
-				<div className='spacer'></div>
 				<section id='education'>
 					<h2>Education</h2>
 					<Education/>
 				</section>
 
 				{/* Skills */}
+				<div className='spacer'></div>
 
 				{/* Projects */}
-				<div className='spacer'></div>
 				<section id='projects'>
 					<h2>Recent Projects</h2>
 					<Projects/>
 				</section>
+				<div className='spacer'></div>
 
 				{/* Contact */}
-				<div className='spacer'></div>
 				<section id='contact'>
 					<h2>Contact Me!</h2>
 					<Contact/>
 				</section>
-
 				<div className='spacer'></div>
 
 				<footer>

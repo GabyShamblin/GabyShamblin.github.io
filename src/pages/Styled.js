@@ -10,7 +10,7 @@ import CircleIcon from '@mui/icons-material/Circle';
 
 // A blue button
 const CustomButton = styled(Button)(() => ({
-	minWidth: 200,
+	minWidth: 150,
 	backgroundColor: "rgba(2, 232, 232, 0.2)", 
 	color: '#02e8e8', 
 	border: '2px solid #02e8e8',
@@ -179,7 +179,6 @@ const ListDate = styled('div')(() => ({
 
 // A non-clickable chip for displaying small bits of information
 const SkillChip = styled(Chip)(() => ({
-	margin: 3,
 	color: '#1efc0f',
 	backgroundColor: 'rgba(30, 252, 15, 0.2)',
 	border: '2px solid #1efc0f',

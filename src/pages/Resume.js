@@ -34,7 +34,7 @@ function Resume() {
 
 			<Link to={resume} download target='_blank' rel="noopener noreferrer">
 			<CustomButton 
-				aria-label='Send message' 
+				aria-label='Download PDF resume' 
 				size='large'
 			>
 				<FeedIcon/>

@@ -7,7 +7,7 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 
 
 
-const UpArrowLink = styled(HashLink)(() => ({
+const UpArrowLink = styled('div')(() => ({
 	position: 'fixed',
 	display: 'flex',
 	bottom: 10,
@@ -28,16 +28,15 @@ const UpArrowLink = styled(HashLink)(() => ({
 }));
 
 function App() {
-	const [path, setPath] = React.useState('');
-	if (path !== window.location.pathname) {
-		setPath(window.location.pathname);
-	}
+	const scrollToTop = () => {
+		window.scrollTo({top: 0, behavior: 'smooth'})
+	};
 
   return (
 		<React.Fragment>
 			<div className="App-header">
 				
-				<UpArrowLink smooth to={path + '#'} style={{textDecoration: 'none'}}>
+				<UpArrowLink onClick={scrollToTop} style={{textDecoration: 'none'}}>
 					<ArrowBackIosIcon sx={{fontSize: 40}}/>
 				</UpArrowLink>
 
