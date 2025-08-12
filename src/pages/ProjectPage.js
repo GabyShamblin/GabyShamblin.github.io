@@ -5,7 +5,7 @@ import { Grid } from '@mui/material';
 import './css/App.css';
 import './css/typing.css';
 
-import projects from './data/projectData.js';
+import { projects } from './data/projectData.js';
 import { Socials } from './Contact.js';
 import { CustomButton, SkillChip } from './Styled.js';
 

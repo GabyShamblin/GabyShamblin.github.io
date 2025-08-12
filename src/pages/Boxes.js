@@ -66,6 +66,26 @@ function CalculateMonthDiff(startDate, endDate) {
 	return timeString;
 }
 
+// Take markdown format and turn it into html tags
+function FlairText(input) {
+	const regex = /(\*\*[^*]+\*\*|\*[^*]+\*)/g;
+
+	let output = input.split(regex);
+
+	return output.map((part, i) => {
+		// Make bold text
+		if (part.startsWith("**") && part.endsWith("**")) {
+			return <strong key={i}>{part.slice(2, -2)}</strong>;
+		}
+		// Make italic text
+		else if (part.startsWith("*") && part.endsWith("*")) {
+			return <em key={i}>{part.slice(1, -1)}</em>;
+		}
+		else { return part; }
+	});
+}
+
+
 
 function ProjectsBox(props) {
 	const project = props.project;
@@ -111,6 +131,44 @@ function ProjectsBox(props) {
 	);
 }
 
+function PublicationsBox(props) {
+	const pub = props.pub;
+
+	return (
+		<div sx={{m: 'auto'}}>
+			<CustomBox link={true} p={2} sx={{m: 'auto', textAlign: 'left'}}>
+				<Grid container>
+					<Grid size={12} justifyContent='center'>
+						<div>
+							{FlairText(pub.authors)} ({pub.year}). "{pub.title}". {FlairText(pub.publisher)}.
+						</div>
+					</Grid>	
+					{pub.links ? 
+						<Grid container spacing={2}>
+							{pub.links.map(link => (
+								<Grid>
+									{link.file ? 
+									<Link to={link.file} download target='_blank' rel="noopener noreferrer">
+										<CustomButton>
+											{link.label}
+										</CustomButton>
+									</Link>
+									:
+									<Link to={link.click} target="_blank" rel="noopener">
+										<CustomButton>
+											{link.label}
+										</CustomButton>
+									</Link>
+									}
+								</Grid>
+							))}
+						</Grid>
+					: <div/>}
+				</Grid>
+			</CustomBox>
+		</div>
+	);
+}
 
 function TimelineDegree(props) {
 	const degree = props.degree;
@@ -163,7 +221,13 @@ function TimelineJob(props) {
 				</Grid>
 				<ListGrid size="grow" pl={2} ml={2} pb={4}>
 					<div>
-						{job.title} | <i>{job.company}</i>
+						{job.title}
+					</div>
+					<div>
+						<i>{job.company}</i>
+					</div>
+					<div>
+						<i>{job.location}</i>
 					</div>
 					<List className='text-desc'>
 						{job.description.map(desc => (
@@ -171,6 +235,7 @@ function TimelineJob(props) {
 								{desc}
 							</ListItem>
 						))}
+						{job.skills ?
 						<ListItem>
 							<Grid container>
 								{job.skills.map(skill => (
@@ -180,6 +245,7 @@ function TimelineJob(props) {
 								))}
 							</Grid>
 						</ListItem>
+						: <div/>}
 					</List>
 				</ListGrid>
 			</Grid>
@@ -237,4 +303,4 @@ function Cert(props) {
 
 
 
-export { ProjectsBox, TimelineDegree, TimelineJob, SkillSection, Logo, Cert };
+export { ProjectsBox, PublicationsBox, TimelineDegree, TimelineJob, SkillSection, Logo, Cert };

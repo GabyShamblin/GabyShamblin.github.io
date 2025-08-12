@@ -17,7 +17,7 @@ const experience = [
 	{
 		title: "Software Engineering Intern", 
 		company: "JP Morgan Chase & Co.",
-		location: "Tampa, FL",
+		location: "Tampa, FL, USA",
 		startDate: "Jun 2023",
 		endDate: "Aug 2023",
 		description: [
@@ -39,15 +39,20 @@ const experience = [
 		], 
 		skills: ["Angular", "TypeScript", "ASP.NET", "SQL", "Azure DevOps"],
 	}, 
+];
+
+const teaching = [
 	// TA
 	{
 		title: "Teaching Assistant", 
 		company: "University of Central Florida",
-		location: "Orlando, FL",
+		location: "Orlando, FL, USA",
 		startDate: "Jul 2021",
 		endDate: "Dec 2022",
 		description: [
-			"Taught foundational Python programming concepts to classes of 230 students, provided timely feedback on assignments, and supported learning through labs and office hours."
+			"Led twice-weekly lab sessions for 20-30 students at a time, providing hands-on guidance in foundational topics such as variables, conditionals, loops, and functions.",
+			"Hosted weekly virtual office hours to support student learning outside of class time and answer code-related questions.",
+			"Graded assignments for about 80 students per semester, delivering timely and constructive feedback to reinforce core programming skills."
 		], 
 		skills: ["Python"],
 	}, 
@@ -55,34 +60,62 @@ const experience = [
 	{
 		title: "Teaching Assistant", 
 		company: "UCF Computer Science Summer Institute",
-		location: "Orlando, FL",
+		location: "Orlando, FL, USA",
 		startDate: "Jun 2021",
 		endDate: "Jun 2021",
 		description: [
 			"Graded assignments and provided appropriate feedback in a timely manner.",
-			"Taught topics in Python to a class of eight students and offered support with questions."
+			"Taught topics in Python to a class of eight students and offered support with assignments."
 		], 
 		skills: ["Python", "PyGame"],
 	},
 ];
 
+const research = [
+	{
+		title: "Graduate Research Affiliate", 
+		company: "Extended Reality and Artificial Intelligence (XRAI) Lab",
+		location: "University of Central Florida",
+		startDate: "Aug 2024",
+		endDate: "",
+		description: [
+			"Participate in weekly lab meetings and presenting updates on independent research under Dr. Ryan McMahan."
+		], 
+		// skills: ["Unity", "C#", "Meta XR SDK"],
+	}, 
+	{
+		title: "Undergraduate Research Assistant", 
+		company: "Extended Reality and Traning (XRT) Lab",
+		location: "Virginia Tech",
+		startDate: "Jan 2022",
+		endDate: "Jul 2024",
+		description: [
+			"Participated in weekly lab meetings directed by Dr. Ryan McMahan.",
+			"Collaborated with other students on VR-based training prototypes.",
+			"Reported on course-related technical progress and gained exposure to academic research progress."
+		], 
+		// skills: ["React.js", "Springboot", "Jest", "Agile", "Scrum", "Kanban"],
+	}, 
+];
+
 const education = [
 	{
 		school: "University of Central Florida", 
-		location: "Orlando, FL",
+		location: "Orlando, FL, USA",
 		graduation: "May 2025",
-		degree: "Master of Science, Computer Science",
+		degree: "M.S. Computer Science",
 		extras: [
-			"Thesis on \"The Impact of Visualization Styles on Movement Imitation Accuracy in Virtual Reality\"",
-			"Mixed Reality Certificate",
+			"Thesis: \"The Impact of Visualization Styles on Movement Imitation Accuracy in Virtual Reality\"",
+			"Advisor: Dr. Joseph J. LaViola",
+			"Mixed Reality Graduate Certificate",
 			"GPA: 3.6/4.0"
 		],
 		link: "https://www.parchment.com/u/award/edfa02d6d8bcc242dbdee5a440db63c7"
 	}, {
 		school: "University of Central Florida", 
-		location: "Orlando, FL",
+		location: "Orlando, FL, USA",
 		graduation: "Dec 2023",
-		degree: "Bachelor of Science, Computer Science",
+		degree: "B.S. Computer Science",
 		extras: [
 			"GPA: 3.7/4.0"
 		],
@@ -335,12 +368,4 @@ const certs = [
 	}
 ]
 
-const activities = {
-	title: "Extended Reality & Training Lab Volunteer", 
-	dates: "Jan 2022 - Present",
-	description: [
-		"I am working on a VR grocery store environment will be used to collect data from players and study their interactions with the virtual space."
-	], 
-};
-
-export { experience, education, skills, certs };
+export { experience, teaching, research, education, skills, certs };

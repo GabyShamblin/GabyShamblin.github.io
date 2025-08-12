@@ -12,7 +12,9 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import DescriptionIcon from '@mui/icons-material/Description';
+
 import resume from './public/Gabriela Shamblin Resume 2025.pdf';
+import cv from './public/Gabriela Shamblin CV.pdf';
 
 import emailjs from '@emailjs/browser';
 
@@ -99,20 +101,20 @@ function Contact() {
 
 function Socials() {
 	return (
-		<Grid container spacing={3} direction="row" justifyContent="center">
+		<Grid container rowSpacing={1} columnSpacing={3} direction="row" justifyContent="center">
 			<Grid>
 				<Link to="https://github.com/GabyShamblin" 
 				target="_blank" rel="noopener">
-					<CustomIconButton aria-label='Github' title='See my GitHub'>
+					<CustomIconButton aria-label='Github' title='GitHub'>
 						<GitHubIcon fontSize='large'/>
 					</CustomIconButton>
 				</Link>
 			</Grid>
 
 			<Grid>
-				<Link to="https://www.linkedin.com/in/gabriela-shamblin-7416611b7/" 
+				<Link to="https://www.linkedin.com/in/gabriela-shamblin/" 
 				target="_blank" rel="noopener">
-					<CustomIconButton aria-label='LinkedIn' title='See my LinkedIn'>
+					<CustomIconButton aria-label='LinkedIn' title='LinkedIn'>
 						<LinkedInIcon fontSize='large'/>
 					</CustomIconButton>
 				</Link>
@@ -121,7 +123,7 @@ function Socials() {
 			<Grid>
 				<Link to="https://www.youtube.com/@gabyshamblin" 
 				target="_blank" rel="noopener">
-					<CustomIconButton aria-label='YouTube' title='See my YouTube'>
+					<CustomIconButton aria-label='YouTube' title='YouTube'>
 						<YouTubeIcon fontSize='large'/>
 					</CustomIconButton>
 				</Link>
@@ -130,18 +132,30 @@ function Socials() {
 			<Grid>
 				<Link to="mailto:gabyshamblin@gmail.com" 
 				target="_blank" rel="noopener">
-					<CustomIconButton aria-label='Email' title='Send me an email'>
+					<CustomIconButton aria-label='Email' title='Email'>
 						<EmailIcon fontSize='large'/>
 					</CustomIconButton>
 				</Link>
 			</Grid>
 
-			<Grid>
-				<Link to={resume} download target='_blank' rel="noopener noreferrer">
-					<CustomIconButton aria-label='Resume' title='See my resume'>
-						<DescriptionIcon fontSize='large'/>
-					</CustomIconButton>
-				</Link>
+			<Grid container size={12} spacing={3} direction="row" justifyContent="center">
+				<Grid>
+					<Link to={resume} download target='_blank' rel="noopener noreferrer">
+						<CustomIconButton aria-label='Resume' title='Resume'>
+							{/* <DescriptionIcon fontSize='large'/>  */}
+							Resume
+						</CustomIconButton>
+					</Link>
+				</Grid>
+
+				<Grid>
+					<Link to={cv} download target='_blank' rel="noopener noreferrer">
+						<CustomIconButton aria-label='CV' title='CV'>
+							{/* <DescriptionIcon fontSize='large'/>  */}
+							CV
+						</CustomIconButton>
+					</Link>
+				</Grid>
 			</Grid>
 		</Grid>
 	);

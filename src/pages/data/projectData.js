@@ -135,7 +135,7 @@ const projects = [
 		summary: "A series of six virtual reality projects covering multiple topics",
 		description: [
 			"Six Unity projects on different topics created for CAP 5115: Virtual Reality Engineering.", 
-			"Topics include virtual environments, traveling, interactions, pyhsics, animations, and user interactions."
+			"Topics include virtual environments, traveling, interactions, physics, animations, and user interactions."
 		], 
 		skills: ["Unity", "C#", "SteamVR"], 
 		links: [
@@ -224,4 +224,17 @@ const projects = [
 	// }
 ];
 
-export default projects;
+const publications = [
+	// Thesis
+	{
+		authors: "**Gabriela R. Shamblin**, Ryan P. McMahan, Joseph J. LaViola",
+		year: "2026",
+		title: "Investigating Gestures, Animations, and Spatial References for Acquiring Motor Skills in Virtual Reality",
+		publisher: "Planned submission to *ACM Conference on Human Factors in Computing Systems (CHI)*",
+		links: [
+			// {label: "Project Github", click: "https://github.com/GabyShamblin/Thesis-Project"},
+		]
+	},
+];
+
+export { projects, publications };

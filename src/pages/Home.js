@@ -7,9 +7,9 @@ import './css/blobs.css';
 import './css/typing.css';
 import './css/styles.css';
 
-import { experience, education } from './data/resumeData.js';
-import projects from './data/projectData.js';
-import { ProjectsBox, TimelineDegree, TimelineJob } from './Boxes.js';
+import { experience, teaching, research, education } from './data/resumeData.js';
+import { projects, publications } from './data/projectData.js';
+import { ProjectsBox, PublicationsBox, TimelineDegree, TimelineJob } from './Boxes.js';
 import { Contact, Socials } from './Contact.js';
 import { CenterMenuText, CenterMenuLine, CustomBox } from './Styled.js';
 
@@ -59,7 +59,7 @@ function Home() {
 						/* Gabriela Shamblin */
 					</h1>
 					<div className='subtitle'>
-						Developer with a passion for virtual reality, full-stack development, and user-focused design
+						Developer with a passion for virtual reality, immersive systems, and user-focused design
 					</div>
 				</div>
 
@@ -100,6 +100,15 @@ function Home() {
 						</Grid> */}
 
 						<Grid>
+							<HashLink smooth to="/#education" scroll={scrollWithOffset} style={{textDecoration: 'none'}}>
+								<CenterMenuText>
+										<strong>Education</strong>
+										<CenterMenuLine chars={9}/>
+								</CenterMenuText>
+							</HashLink>
+						</Grid>
+
+						<Grid>
 							<HashLink smooth to="/#experience" scroll={scrollWithOffset} style={{textDecoration: 'none'}}>
 								<CenterMenuText>
 										<strong>Experience</strong>
@@ -109,10 +118,10 @@ function Home() {
 						</Grid>
 
 						<Grid>
-							<HashLink smooth to="/#education" scroll={scrollWithOffset} style={{textDecoration: 'none'}}>
+							<HashLink smooth to="/#publications" scroll={scrollWithOffset} style={{textDecoration: 'none'}}>
 								<CenterMenuText>
-										<strong>Education</strong>
-										<CenterMenuLine chars={9}/>
+										<strong>Publications</strong>
+										<CenterMenuLine chars={11}/>
 								</CenterMenuText>
 							</HashLink>
 						</Grid>
@@ -148,20 +157,36 @@ function Home() {
 				</div>
 				<div className='spacer'></div>
 
-				{/* Experience */}
-				<section id='experience'>
-					<h2>Experience</h2>
-					<Experience/>
-				</section>
-				<div className='spacer'></div>
+
 
 				{/* Education */}
 				<section id='education'>
 					<h2>Education</h2>
 					<Education/>
 				</section>
+				<div className='spacer'></div>
+
+				{/* Experience */}
+				<section id='experience'>
+					<h2>Research Experience</h2>
+					<Research/>
+
+					<h2>Professional Experience</h2>
+					<Experience/>
+
+					<h2>Teaching Experience</h2>
+					<Teaching/>
+				</section>
+				<div className='spacer'></div>
 
 				{/* Skills */}
+				{/* <div className='spacer'></div> */}
+
+				{/* Publications */}
+				<section id='publications'>
+					<h2>Publications</h2>
+					<Publications/>
+				</section>
 				<div className='spacer'></div>
 
 				{/* Projects */}
@@ -200,22 +225,24 @@ function About () {
 			<List dense>
 				<ListItem>
 					<p className='nerf-p'>
-						<b>Aspiring Full Stack Developer</b> with a passion for building immersive experiences and developing innovative solutions through virtual reality technologies and full-stack applications. Academic foundation includes advanced studies in computer science with a focus on VR integration, mixed reality environments, and interactive user experiences.
+						{/* <b>Aspiring Full Stack Developer</b> with a passion for building immersive experiences and developing innovative solutions through virtual reality technologies and full-stack applications. Academic foundation includes advanced studies in computer science with a focus on VR integration, mixed reality environments, and interactive user experiences. */}
+						<b>Aspiring Researcher</b> specializing in virtual reality and immersive technologies, with a strong foundation in computer science and mixed reality environments.
 					</p>
 				</ListItem>
 				<ListItem>
 					<p className='nerf-p'>
-						<b>High-Potential Professional</b>, poised to deliver on corporate objectives and develop creative solutions to complex challenges, such as VR simulations for surgical training and algorithm-driven web applications.
+						{/* <b>High-Potential Professional</b>, poised to deliver on corporate objectives and develop creative solutions to complex challenges, such as VR simulations for surgical training and algorithm-driven web applications. */}
+						<b>Passionate</b> about human-computer interaction and user experience, focusing on creating immersive VR environments that priotitize intuitive design and meaningful user engagement.
 					</p>
 				</ListItem>
 				<ListItem>
 					<p className='nerf-p'>
-						<b>Dedicated Team Player</b>, who thrives on solving problems, guiding others to meet project goals, and cultivating innovative ideas.
+						<b>Dedicated Team Player</b> who thrives on solving problems, guiding others to meet project goals, and cultivating innovative ideas.
 					</p>
 				</ListItem>
-				<ListItem>
+				{/* <ListItem>
 					Recently completed a Master’s in Computer Science at the University of Central Florida
-				</ListItem>
+				</ListItem> */}
 			</List>
 		</CustomBox>
 	);
@@ -238,6 +265,45 @@ function Experience () {
 	const list = [];
 	for (let i = 0; i < 3; i++) {
 		list.push(<TimelineJob job={experience[i]}/>);
+	}
+
+	return (
+		<CustomBox px={2} py={4} sx={{m: 'auto'}}>
+			{list}
+		</CustomBox>
+	);
+}
+
+function Teaching () {
+	const list = [];
+	for (let i = 0; i < teaching.length; i++) {
+		list.push(<TimelineJob job={teaching[i]}/>);
+	}
+
+	return (
+		<CustomBox px={2} py={4} sx={{m: 'auto'}}>
+			{list}
+		</CustomBox>
+	);
+}
+
+function Research () {
+	const list = [];
+	for (let i = 0; i < research.length; i++) {
+		list.push(<TimelineJob job={research[i]}/>);
+	}
+
+	return (
+		<CustomBox px={2} py={4} sx={{m: 'auto'}}>
+			{list}
+		</CustomBox>
+	);
+}
+
+function Publications () {
+	const list = [];
+	for (let i = 0; i < publications.length; i++) {
+		list.push(<PublicationsBox pub={publications[i]}/>);
 	}
 
 	return (

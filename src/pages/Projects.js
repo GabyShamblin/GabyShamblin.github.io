@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import './css/App.css';
 import './css/typing.css';
 
-import projects from './data/projectData.js';
+import { projects } from './data/projectData.js';
 
 
 
