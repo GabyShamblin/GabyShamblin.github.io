@@ -240,6 +240,23 @@ function About () {
 						<b>Dedicated Team Player</b> who thrives on solving problems, guiding others to meet project goals, and cultivating innovative ideas.
 					</p>
 				</ListItem>
+				<ListItem sx={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+					<p className='nerf-p' style={{marginBottom: 3}}>
+						<b>Research Interests:</b>
+					</p>
+					<List dense sx={{ listStyleType: 'disc', pl: '20px', pt: 0}}>
+						<ListItem sx={{ display: 'list-item' }}>
+							Virtual Reality (VR), Augmented Reality (AR), and Mixed Reality (MR)
+						</ListItem>
+						<ListItem sx={{ display: 'list-item' }}>
+							Human-Computer Interaction (HCI) and User Experience (UX)
+						</ListItem>
+						<ListItem sx={{ display: 'list-item' }}>
+							Medical Simulation and Education
+						</ListItem>
+					</List>
+					
+				</ListItem>
 				{/* <ListItem>
 					Recently completed a Master’s in Computer Science at the University of Central Florida
 				</ListItem> */}

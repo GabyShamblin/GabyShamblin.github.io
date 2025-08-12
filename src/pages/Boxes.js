@@ -98,11 +98,11 @@ function ProjectsBox(props) {
 		<div sx={{m: 'auto'}}>
 			<Link to={`/projects/${project.id}`} className='no-underline'>
 				<CustomBox link={true} p={2} sx={{m: 'auto', textAlign: 'left'}}>
-					<Grid container>
-						<Grid size={{xs: 12, sm: 2}} justifyContent='center'>
+					<Grid container spacing={1}>
+						<Grid size={{xs: 12, md: 4}} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-start' }}>
 							<img src={require(`./public/thumbnails/${project.media}`)} id='thumbnail' alt='Project' className='center'/>
 						</Grid>	
-						<ListGrid size="grow" blue={true} pl={2} ml={2}>
+						<ListGrid size="grow" blue={true}>
 							<div>
 								{project.title}
 							</div>
@@ -136,7 +136,7 @@ function PublicationsBox(props) {
 
 	return (
 		<div sx={{m: 'auto'}}>
-			<CustomBox link={true} p={2} sx={{m: 'auto', textAlign: 'left'}}>
+			<CustomBox link={false} p={2} sx={{m: 'auto', textAlign: 'left'}}>
 				<Grid container>
 					<Grid size={12} justifyContent='center'>
 						<div>
@@ -186,7 +186,13 @@ function TimelineDegree(props) {
 				</Grid>
 				<ListGrid size="grow" pl={2} ml={2} pb={4}>
 					<div>
-						{degree.degree} | <i>{degree.school}</i>
+						{degree.degree}
+					</div>
+					<div>
+						<i>{degree.school}</i>
+					</div>
+					<div>
+						<i>{degree.location}</i>
 					</div>
 					<List dense className='text-desc'>
 						{degree.extras.map(extra => (

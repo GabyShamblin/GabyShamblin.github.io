@@ -48,7 +48,7 @@
 
 .title {
   font-family: monospace;
-  font-size: calc(25px + 1vw) !important;
+  font-size: calc(20px + 1.2vw) !important;
 	font-weight: 500;
 	color: #1efc0f;
 	animation: up 1s ease-out 1;
