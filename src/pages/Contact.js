@@ -132,7 +132,7 @@ function Socials() {
 			<Grid>
 				<Link to="mailto:gabyshamblin@gmail.com" 
 				target="_blank" rel="noopener">
-					<CustomIconButton aria-label='Email' title='Email'>
+					<CustomIconButton aria-label='Email' title='Send an email'>
 						<EmailIcon fontSize='large'/>
 					</CustomIconButton>
 				</Link>
@@ -140,21 +140,21 @@ function Socials() {
 
 			<Grid container size={12} spacing={3} direction="row" justifyContent="center">
 				<Grid>
-					<Link to={resume} download target='_blank' rel="noopener noreferrer">
-						<CustomIconButton aria-label='Resume' title='Resume'>
+					<a href={resume} download="Gabriela Shamblin Resume.pdf" target='_blank' rel="noopener noreferrer">
+						<CustomIconButton aria-label='Resume' title='Download my resume'>
 							{/* <DescriptionIcon fontSize='large'/>  */}
 							Resume
 						</CustomIconButton>
-					</Link>
+					</a>
 				</Grid>
 
 				<Grid>
-					<Link to={cv} download target='_blank' rel="noopener noreferrer">
-						<CustomIconButton aria-label='CV' title='CV'>
+					<a href={cv} download="Gabriela Shamblin CV.pdf" target='_blank' rel="noopener noreferrer">
+						<CustomIconButton aria-label='CV' title='Download my CV'>
 							{/* <DescriptionIcon fontSize='large'/>  */}
 							CV
 						</CustomIconButton>
-					</Link>
+					</a>
 				</Grid>
 			</Grid>
 		</Grid>
