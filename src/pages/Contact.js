@@ -7,11 +7,12 @@ import './css/typing.css';
 
 import { CustomIconButton, CustomBox, CustomButton, CustomTextField } from './Styled.js';
 
-import EmailIcon from '@mui/icons-material/Email';
+import DescriptionIcon from '@mui/icons-material/Description';
+import EmailIcon from '@mui/icons-material/EmailRounded';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import SchoolIcon from '@mui/icons-material/SchoolRounded';
 import YouTubeIcon from '@mui/icons-material/YouTube';
-import DescriptionIcon from '@mui/icons-material/Description';
 
 import resume from './public/Gabriela Shamblin Resume 2025.pdf';
 import cv from './public/Gabriela Shamblin CV.pdf';
@@ -130,9 +131,18 @@ function Socials() {
 			</Grid>
 
 			<Grid>
+				<Link to="https://scholar.google.com/citations?user=Z_9iKsMAAAAJ&hl=en" 
+				target="_blank" rel="noopener">
+					<CustomIconButton aria-label='Google Scholar' title='Google Scholar'>
+						<SchoolIcon fontSize='large'/>
+					</CustomIconButton>
+				</Link>
+			</Grid>
+
+			<Grid>
 				<Link to="mailto:gabyshamblin@gmail.com" 
 				target="_blank" rel="noopener">
-					<CustomIconButton aria-label='Email' title='Send an email'>
+					<CustomIconButton aria-label='Email' title='Email'>
 						<EmailIcon fontSize='large'/>
 					</CustomIconButton>
 				</Link>
