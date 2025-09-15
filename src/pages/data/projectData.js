@@ -229,7 +229,7 @@ const publications = [
 	{
 		authors: "**Gabriela R. Shamblin**, Ryan P. McMahan, Joseph J. LaViola",
 		year: "2026",
-		title: "Investigating Gestures, Animations, and Spatial References for Acquiring Motor Skills in Virtual Reality",
+		title: "Show Me the Way: Investigating Gestures, Animations, and Spatial References for Acquiring Motor Skills in Virtual Reality",
 		publisher: "Planned submission to *ACM Conference on Human Factors in Computing Systems (CHI)*",
 		links: [
 			// {label: "Project Github", click: "https://github.com/GabyShamblin/Thesis-Project"},

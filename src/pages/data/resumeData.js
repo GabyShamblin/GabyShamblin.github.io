@@ -75,7 +75,7 @@ const research = [
 	{
 		title: "Graduate Research Affiliate", 
 		company: "Extended Reality and Artificial Intelligence (XRAI) Lab",
-		location: "University of Central Florida",
+		location: "Virginia Tech",
 		startDate: "Aug 2024",
 		endDate: "",
 		description: [
@@ -86,7 +86,7 @@ const research = [
 	{
 		title: "Undergraduate Research Assistant", 
 		company: "Extended Reality and Traning (XRT) Lab",
-		location: "Virginia Tech",
+		location: "University of Central Florida",
 		startDate: "Jan 2022",
 		endDate: "Jul 2024",
 		description: [
