@@ -103,7 +103,7 @@ function Socials() {
 			<Grid>
 				<Link to="https://github.com/GabyShamblin" 
 				target="_blank" rel="noopener">
-					<CustomIconButton aria-label='Github' title='See my GitHub'>
+					<CustomIconButton aria-label='Git Hub' title='GitHub'>
 						<GitHubIcon fontSize='large'/>
 					</CustomIconButton>
 				</Link>
@@ -112,7 +112,7 @@ function Socials() {
 			<Grid>
 				<Link to="https://www.linkedin.com/in/gabriela-shamblin-7416611b7/" 
 				target="_blank" rel="noopener">
-					<CustomIconButton aria-label='LinkedIn' title='See my LinkedIn'>
+					<CustomIconButton aria-label='Linked In' title='LinkedIn'>
 						<LinkedInIcon fontSize='large'/>
 					</CustomIconButton>
 				</Link>
@@ -121,7 +121,7 @@ function Socials() {
 			<Grid>
 				<Link to="https://www.youtube.com/@gabyshamblin" 
 				target="_blank" rel="noopener">
-					<CustomIconButton aria-label='YouTube' title='See my YouTube'>
+					<CustomIconButton aria-label='You Tube' title='YouTube'>
 						<YouTubeIcon fontSize='large'/>
 					</CustomIconButton>
 				</Link>
@@ -130,7 +130,7 @@ function Socials() {
 			<Grid>
 				<Link to="mailto:gabyshamblin@gmail.com" 
 				target="_blank" rel="noopener">
-					<CustomIconButton aria-label='Email' title='Send me an email'>
+					<CustomIconButton aria-label='Email' title='Email'>
 						<EmailIcon fontSize='large'/>
 					</CustomIconButton>
 				</Link>
