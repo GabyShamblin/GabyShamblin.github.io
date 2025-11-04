@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.8b2a230a.css",
-    "main.js": "/static/js/main.53701ce6.js",
+    "main.css": "/static/css/main.a40d41ff.css",
+    "main.js": "/static/js/main.101364d6.js",
     "static/js/488.ebe48671.chunk.js": "/static/js/488.ebe48671.chunk.js",
     "static/media/rain-project.png": "/static/media/rain-project.c7e26c86b08f14d8b379.png",
     "static/media/mr-thumb.png": "/static/media/mr-thumb.7d702ed5f6d69bc06786.png",
@@ -12,6 +12,7 @@
     "static/media/scheduler.jpg": "/static/media/scheduler.05226f7a285abed7e833.jpg",
     "static/media/grayWebsite.jpg": "/static/media/grayWebsite.b87a05969b142f828ffe.jpg",
     "static/media/advvr-thumb.png": "/static/media/advvr-thumb.bcbd63af018371fadce3.png",
+    "static/media/Gabriela Shamblin CV.pdf": "/static/media/Gabriela Shamblin CV.92f5b03e93040fa9b323.pdf",
     "static/media/senserator-thumb.jpg": "/static/media/senserator-thumb.4c129d302f4188335c14.jpg",
     "static/media/diceGame.jpg": "/static/media/diceGame.7e7c3e618bfeefe6d02d.jpg",
     "static/media/Gabriela Shamblin Resume 2025.pdf": "/static/media/Gabriela Shamblin Resume 2025.08b002ef6ed3b02a995c.pdf",
@@ -27,12 +28,12 @@
     "static/media/vr-thumb.png:Zone.Identifier": "/static/media/vr-thumb.png:Zone.845c2f953b7ddcf3cbbb.Identifier",
     "static/media/Screenshot 2024-05-12 230610.png:Zone.Identifier": "/static/media/Screenshot 2024-05-12 230610.png:Zone.4c1ca89552fbd0b99026.Identifier",
     "static/media/place-cont-async.png:Zone.Identifier": "/static/media/place-cont-async.png:Zone.4c1ca89552fbd0b99026.Identifier",
-    "main.8b2a230a.css.map": "/static/css/main.8b2a230a.css.map",
-    "main.53701ce6.js.map": "/static/js/main.53701ce6.js.map",
+    "main.a40d41ff.css.map": "/static/css/main.a40d41ff.css.map",
+    "main.101364d6.js.map": "/static/js/main.101364d6.js.map",
     "488.ebe48671.chunk.js.map": "/static/js/488.ebe48671.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8b2a230a.css",
-    "static/js/main.53701ce6.js"
+    "static/css/main.a40d41ff.css",
+    "static/js/main.101364d6.js"
   ]
 }
