@@ -43,8 +43,8 @@ function CalculateMonthDiff(startDate, endDate) {
 		years: years,
 		months: months
 	};
-
 	let timeString = "";
+
 	if (time.years == 1) {
 		timeString += time.years + " year";
 	}
@@ -64,6 +64,18 @@ function CalculateMonthDiff(startDate, endDate) {
 	}
 
 	return timeString;
+}
+
+// Create the "from to" string
+function CreateMonthString(startDate, endDate) {
+	if (startDate == endDate) {
+		return startDate + "";
+	}
+	else if (endDate == "") {
+		return startDate + " - Present";
+	}
+	
+	return startDate + " - " + endDate;
 }
 
 // Take markdown format and turn it into html tags
@@ -209,6 +221,7 @@ function TimelineDegree(props) {
 
 function TimelineJob(props) {
 	const job = props.job;
+	const monthsString = CreateMonthString(job.startDate, job.endDate);
 	const timeString = CalculateMonthDiff(job.startDate, job.endDate);
 
 	return (
@@ -217,7 +230,7 @@ function TimelineJob(props) {
 				<Grid size={2}>
 					<div className='rel'>
 						<ListDate>
-							{job.startDate} - {job.endDate == "" ? "Present" : job.endDate}
+							{monthsString}
 						</ListDate>
 						<ListDate className='subtitle-dark'>
 							{timeString}

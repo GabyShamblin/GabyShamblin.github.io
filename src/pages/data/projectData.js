@@ -1,4 +1,17 @@
 const projects = [
+	// Abby
+	// {
+	// 	title: "thelifeofacruiser.com", 
+	// 	dates: "Jan 2026 - Present",
+	// 	media: "", 
+	// 	description: [
+	// 		"Designed and maintain a live WordPress site for a content creator, integrating blog features, media embedding, and responsive layouts."
+	// 	], 
+	// 	skills: ["WordPress", "HTML", "CSS"], 
+	// 	links: [
+	// 		{label: "Website", click: "https://thelifeofacruiser.com/"}
+	// 	]
+	// }, 
 	// Thesis
 	{
 		id: "thesis",
@@ -230,7 +243,7 @@ const publications = [
 		authors: "**Gabriela R. Shamblin**, Ryan P. McMahan, Joseph J. LaViola",
 		year: "2026",
 		title: "Show Me the Way: Investigating Gestures, Animations, and Spatial References for Acquiring Motor Skills in Virtual Reality",
-		publisher: "Planned submission to *ACM Conference on Human Factors in Computing Systems (CHI)*",
+		publisher: "Planned submission to *ACM Conference on Designing Interactive Systems (DIS)*",
 		links: [
 			// {label: "Project Github", click: "https://github.com/GabyShamblin/Thesis-Project"},
 		]

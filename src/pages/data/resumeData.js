@@ -21,11 +21,11 @@ const experience = [
 		startDate: "Jun 2023",
 		endDate: "Aug 2023",
 		description: [
-			"Designed and deployed an ADA-compliant user interface for an internal application using React.js and Springboot, supporting 30,000 users and enhancing accessibility.",
+			"Designed and deployed an ADA-compliant user interface for an internal application using React and Springboot, supporting 30,000 users and enhancing accessibility.",
 			"Communicated with shareholders about project specifications.",
 			"Worked alongside six other people using Agile and Kanban development strategies."
 		], 
-		skills: ["React.js", "Springboot", "Jest", "Agile", "Scrum", "Kanban"],
+		skills: ["React", "Springboot", "Jest", "Agile", "Scrum", "Kanban"],
 	}, 
 	// Trevor
 	{
@@ -94,7 +94,7 @@ const research = [
 			"Collaborated with other students on VR-based training prototypes.",
 			"Reported on course-related technical progress and gained exposure to academic research progress."
 		], 
-		// skills: ["React.js", "Springboot", "Jest", "Agile", "Scrum", "Kanban"],
+		// skills: ["React", "Springboot", "Jest", "Agile", "Scrum", "Kanban"],
 	}, 
 ];
 

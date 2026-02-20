@@ -117,14 +117,14 @@ function Home() {
 							</HashLink>
 						</Grid>
 
-						<Grid>
+						{/* <Grid>
 							<HashLink smooth to="/#publications" scroll={scrollWithOffset} style={{textDecoration: 'none'}}>
 								<CenterMenuText>
 										<strong>Publications</strong>
 										<CenterMenuLine chars={11}/>
 								</CenterMenuText>
 							</HashLink>
-						</Grid>
+						</Grid> */}
 
 						<Grid>
 							<HashLink smooth to="/#projects" scroll={scrollWithOffset} style={{textDecoration: 'none'}}>
@@ -183,11 +183,11 @@ function Home() {
 				{/* <div className='spacer'></div> */}
 
 				{/* Publications */}
-				<section id='publications'>
+				{/* <section id='publications'>
 					<h2>Publications</h2>
 					<Publications/>
 				</section>
-				<div className='spacer'></div>
+				<div className='spacer'></div> */}
 
 				{/* Projects */}
 				<section id='projects'>
