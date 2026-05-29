@@ -280,7 +280,7 @@ function Education () {
 
 function Experience () {
 	const list = [];
-	for (let i = 0; i < 3; i++) {
+	for (let i = 0; i < 4; i++) {
 		list.push(<TimelineJob job={experience[i]}/>);
 	}
 
