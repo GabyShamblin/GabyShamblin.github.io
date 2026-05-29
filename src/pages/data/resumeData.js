@@ -1,4 +1,16 @@
 const experience = [
+	// Orange County
+	{
+		title: "Programmer Analyst", 
+		company: "Orange County Government",
+		location: "Orlando,FL",
+		startDate: "Jun 2026",
+		endDate: "",
+		description: [
+			
+		], 
+		skills: [],
+	}, 
 	// Johns Hopkins
 	{
 		title: "Programmer Analyst", 
