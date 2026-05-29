@@ -188,8 +188,8 @@ const SkillChip = styled(Chip)(() => ({
 const TimelineCircle = styled(CircleIcon)(() => ({
 	position: 'absolute',
 	color: '#027f8c',
-	top: 0,
-	right: '-31px',
+	top: '-2.5px',
+	right: '-32px',
 }));
 
 // A white circle to put behind transparent images if they are too dark
