@@ -82,7 +82,7 @@ function ProjectsBox(props) {
 						<Grid size={{xs: 12, sm: 2}} justifyContent='center'>
 							<img src={require(`./public/thumbnails/${project.media}`)} id='thumbnail' alt='Project' className='center'/>
 						</Grid>	
-						<ListGrid size="grow" blue={true} pl={2} ml={2}>
+						<ListGrid size="grow" blue={true} ml={2} sx={{pb: '0px !important'}}>
 							<div>
 								{project.title}
 							</div>
@@ -126,7 +126,7 @@ function TimelineDegree(props) {
 						<TimelineCircle/>
 					</div>
 				</Grid>
-				<ListGrid size="grow" pl={2} ml={2} pb={4}>
+				<ListGrid size="grow">
 					<div>
 						{degree.degree} | <i>{degree.school}</i>
 					</div>
@@ -161,7 +161,7 @@ function TimelineJob(props) {
 						<TimelineCircle/>
 					</div>
 				</Grid>
-				<ListGrid size="grow" pl={2} ml={2} pb={4}>
+				<ListGrid size="grow">
 					<div>
 						{job.title} | <i>{job.company}</i>
 					</div>

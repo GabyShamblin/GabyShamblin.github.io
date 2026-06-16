@@ -106,6 +106,9 @@ const CustomBox = styled(Box)(({link = false}) => ({
 // Grid used for keeping lists organized
 const ListGrid = styled(Grid)(({blue = false}) => ({
 	textAlign: 'left', 
+	paddingLeft: '16px',
+	marginLeft: '16px',
+	paddingBottom: '16px',
 	borderLeft: blue ? '5px solid rgba(3, 152, 175, 0)' : '5px solid rgba(2, 232, 232, 0.5)',
 }));
 
@@ -188,8 +191,8 @@ const SkillChip = styled(Chip)(() => ({
 const TimelineCircle = styled(CircleIcon)(() => ({
 	position: 'absolute',
 	color: '#027f8c',
-	top: 0,
-	right: '-31px',
+	top: '-3px',
+	right: '-32px',
 }));
 
 // A white circle to put behind transparent images if they are too dark
