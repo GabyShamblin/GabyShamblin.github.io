@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.a40d41ff.css",
-    "main.js": "/static/js/main.14586982.js",
+    "main.css": "/static/css/main.cf07eaab.css",
+    "main.js": "/static/js/main.ca9dd501.js",
     "static/js/488.9c3f47cf.chunk.js": "/static/js/488.9c3f47cf.chunk.js",
     "static/media/rain-project.png": "/static/media/rain-project.c7e26c86b08f14d8b379.png",
     "static/media/mr-thumb.png": "/static/media/mr-thumb.7d702ed5f6d69bc06786.png",
@@ -12,7 +12,6 @@
     "static/media/scheduler.jpg": "/static/media/scheduler.05226f7a285abed7e833.jpg",
     "static/media/grayWebsite.jpg": "/static/media/grayWebsite.b87a05969b142f828ffe.jpg",
     "static/media/advvr-thumb.png": "/static/media/advvr-thumb.bcbd63af018371fadce3.png",
-    "static/media/Gabriela Shamblin CV.pdf": "/static/media/Gabriela Shamblin CV.92f5b03e93040fa9b323.pdf",
     "static/media/senserator-thumb.jpg": "/static/media/senserator-thumb.4c129d302f4188335c14.jpg",
     "static/media/diceGame.jpg": "/static/media/diceGame.7e7c3e618bfeefe6d02d.jpg",
     "static/media/Gabriela Shamblin Resume 2025.pdf": "/static/media/Gabriela Shamblin Resume 2025.08b002ef6ed3b02a995c.pdf",
@@ -28,12 +27,12 @@
     "static/media/placeholder.pngZone.Identifier": "/static/media/placeholder.pngZone.686ce9b6030ddf89d50b.Identifier",
     "static/media/vr-thumb.pngZone.Identifier": "/static/media/vr-thumb.pngZone.686ce9b6030ddf89d50b.Identifier",
     "static/media/Screenshot 2024-05-12 230610.pngZone.Identifier": "/static/media/Screenshot 2024-05-12 230610.pngZone.3da28bfdf128d02b6220.Identifier",
-    "main.a40d41ff.css.map": "/static/css/main.a40d41ff.css.map",
-    "main.14586982.js.map": "/static/js/main.14586982.js.map",
+    "main.cf07eaab.css.map": "/static/css/main.cf07eaab.css.map",
+    "main.ca9dd501.js.map": "/static/js/main.ca9dd501.js.map",
     "488.9c3f47cf.chunk.js.map": "/static/js/488.9c3f47cf.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a40d41ff.css",
-    "static/js/main.14586982.js"
+    "static/css/main.cf07eaab.css",
+    "static/js/main.ca9dd501.js"
   ]
 }
